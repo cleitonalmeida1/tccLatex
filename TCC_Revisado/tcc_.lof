@@ -1,0 +1,22 @@
+\select@language {portuguese}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Modelo de tr\IeC {\^e}s universos}}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Cintur\IeC {\~a}o de Van Allen}}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Caracter\IeC {\'\i }sticas das Falhas}}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Programa\IeC {\c c}\IeC {\~a}o N-Vers\IeC {\~o}es}}{24}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Blocos de Recupera\IeC {\c c}\IeC {\~a}o}}{24}{figure.caption.17}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Mapas das Regi\IeC {\~o}es de Mem\IeC {\'o}ria dos Modelos LPC1768/66/65/64}}{30}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Figura que apresenta a sa\IeC {\'\i }da com os valores das c\IeC {\'o}pias consistentes ap\IeC {\'o}s a inje\IeC {\c c}\IeC {\~a}o de falhas do \autoref {Func:TDataFalhaPrimitivo}.}}{40}{figure.caption.19}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Figura que apresenta a sa\IeC {\'\i }da com os valores das c\IeC {\'o}pias consistentes ap\IeC {\'o}s a inje\IeC {\c c}\IeC {\~a}o de falhas do \autoref {Func:TDataFalhaObjetoPilha}.}}{44}{figure.caption.20}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Figura que apresenta a sa\IeC {\'\i }da com os valores das c\IeC {\'o}pias consistentes ap\IeC {\'o}s a inje\IeC {\c c}\IeC {\~a}o de falhas do \autoref {Func:TDataFalhaPonteiro}.}}{46}{figure.caption.21}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Figura que apresenta a sa\IeC {\'\i }da com os valores das c\IeC {\'o}pias consistentes ap\IeC {\'o}s a atualiza\IeC {\c c}\IeC {\~a}o do objeto \textit {TData} do tipo carro e da inje\IeC {\c c}\IeC {\~a}o de falhas do \autoref {Func:TDataGetDataObjectSaida}.}}{48}{figure.caption.22}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tempo de execu\IeC {\c c}\IeC {\~a}o da biblioteca \textit {FaultRecovery}}}{50}{figure.caption.23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tempo de execu\IeC {\c c}\IeC {\~a}o da Classe TData }}{51}{figure.caption.24}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste de redund\IeC {\^a}ncia de dados da classe TData }}{52}{figure.caption.25}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Resultados Obtidos da Biblioteca \textit {FaultRecovery}}}{53}{figure.caption.26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Inje\IeC {\c c}\IeC {\~a}o de Falhas na Mem\IeC {\'o}ria Flash}}{54}{figure.caption.27}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

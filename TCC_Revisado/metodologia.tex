@@ -1,0 +1,528 @@
+%====================================================================================================
+% FaultRecovery: A ampliação da biblioteca de tolerância a falhas
+%====================================================================================================
+% TCC
+%----------------------------------------------------------------------------------------------------
+% Autor				: Cleiton Gonçalves de Almeida
+% Orientador		: Kleber Kruger
+% Instituição 		: UFMS - Universidade Federal do Mato Grosso do Sul
+% Departamento		: CPCX - Sistema de Informação
+%----------------------------------------------------------------------------------------------------
+% Data de criação	: 10 de Maio de 2016
+%====================================================================================================
+
+\chapter{Metodologia} \label{cap:metodologia}
+
+%Devido ao fato de haver bibliotecas que não passaram por nenhum tipo de teste de desempenho ou de funcionalidade. Ocorre muitas das vezes a existência de fahas causadas por leaks de memória, por exemplo, a biblioteca ConfigFile baixada do repositório do mbed. Essas falhas pode ser detectada pela ferramenta valgrind. Leaks de memória: invalid free, invalid write e invalide read. Citar dissertação Kleber.
+
+Este trabalho teve como objetivo ampliar as bibliotecas \textit{FaultInjector} e \textit{FaultRecovery}, ambas desenvolvidas por Kruger \cite{Kruger:2014} em sua dissertação de mestrado. A biblioteca \textit{FaultInjector} permite a injeção de falhas no sistema mediante a simulação do fenômeno \textit{bit-flip} nas regiões da memória SRAM do microcontrolador. Já a biblioteca \textit{FaultRecovery} proporciona o desenvolvimento de sistemas embarcados confiáveis, pois dispõe de técnicas de tolerância a falhas (baseadas na redundância de dados e de processamento) para aumentar a confiabilidade do sistema.
+
+
+%Como expansão ao trabalho de Kruger, foi melhorado o injetor de falhas de falhas na memória \textit{flash} da biblioteca \textit{FaultInjector} e a classe TData, responsável pela redundância de dados. A arquitetura da biblioteca também pode ser utilizada por sistemas de outras plataformas, por exemplo, os sistemas embarcados implementados para \textit{arduino} que são utilizados na área de robótica e são implementados por meio de máquina de estados.
+
+Para a ampliação das biblioteca citadas, utilizou-se um microcontrolador de prototipagem rápida \textit{mbed}, modelo NXP LPC1768 \cite{lpc1768:2016} (o mesmo utilizado por Kruger). Este é projetado para a prototipagem de diversos equipamentos, especialmente aqueles que necessitam de conexão com a internet, portas USB e interfaces variadas para periféricos. Ele possui um núcleo ARM Cortex-M3 32 bits com 96 MHz de \textit{clock}, 64 KB de memória RAM (32 KB disponíveis ao usuário e 32 KB reservados aos controladores internos do dispositivo), uma memória \textit{flash} de 512 KB, portas \textit{built-in Ethernet}, USB Host, CAN (\textit{Controller Area Network}), SPI (\textit{Serial Peripheral Interface}), I2C (\textit{Inter-Integrated Circuit}), ADC (\textit{Analog-to-Digital Converter}), DAC (\textit{Digital-to-Analog Converter}), PWM (\textit{Pulse-Width Modulation}) e outras interfaces de entrada e saída.
+
+No \textit{site} oficial da plataforma \textit{mbed} são fornecidas soluções para auxiliar o desenvolvimento. Além da possibilidade de baixar bibliotecas fornecidas pela comunidade, o \textit{site} disponibiliza um \textit{forum} para retirada de dúvidas. A \textit{mbed} também fornece um compilador online, no qual após a compilação do código, um arquivo binário é gerado para ser executado no microcontrolador. Este compilador online tem a capacidade de compilar códigos para diversos modelos do \textit{mbed} \cite{mbedCompiler:2016}.
+
+Além do modelo LPC1768, existem outros pertencentes à família \textit{mbed} NXP LPC17X, são eles: LPC1764, LPC1765, LPC1766 \cite{manualLpc176x:2016}. Embora apresentem arquiteturas compatíveis, o tamanho e o mapa de memória \textit{flash} e \textit{SRAM} varia conforme cada um, disinguindo-se por exemplo, nos modelos LPC1768/66/65 que possui endereços de regiões de memória \textit{SRAM} idênticos, mas diferentes ao modelo LPC1764, conforme mostra-se na Figura X. [COLOCAR REFERÊNCIA AO MAPA DE MEMÓRIA - CONFIRA SE ESSA INFORMAÇÃO ESTÁ CORRETA COM A IMAGEM]
+
+%Nenhuma outra técnica, além do temporizador \textit{watchdog} foi utilizada para aumentar a confiabilidade do sistema \cite{Kruger:2014}. O \textit{mbed} possui um temporizador \textit{watchdog} \cite{manualLpc176x:2016}, que é um hardware que reinicia o dispositivo automaticamente em caso de falhas de \textit{hardware} ou de \textit{software}. O temporizador é carregado com um valor inicial, que é decrementado a cada vez que o \textit{watchdog} é executado, sendo que o programa principal executa um \textit{loop} que atravessa a execução de várias funções, que repões o temporizador a cada vez que passa pelo circuito principal, se por conta de uma falha a reposição não ocorrer e o temporizador zerar, o dispositivo será reiniciado. [RETIRAR DAQUI]
+
+%O Compilador online foi utilizado neste trabalho para criar a arquitetura para o desenvolvimento. Com o primeiro contato com o microcontrolador \textit{mbed} identificou-se a necessidade de estudar suas funcionalidades. Com a utilização do compilador online foi possível verificar que seria inviável adotá-lo como um editor de código para a expansão do injetor de falhas e da biblioteca \textit{faultRecovery}. A solução encontrada foi a utilização do ambiente de desenvolvimento integrado (IDE) LPCXpresso, pois o compilador online do \textit{mbed} permite exportar a arquitetura criada para essa IDE. O LPCXpresso é baseado na IDE eclipse e possui versões gratuitas e pagas, neste trabalho utilizou-se a versão gratuita para o modelo NXP LPC176. 
+
+%, implementando um mapeamento do espaço de memória permitindo com que o injetor de falhas possa ser utilizado por qualquer modelo \textit{mbed} LPC176x, injeção de falhas na memória \textit{flash} e a ampliação da biblioteca \textit{faultRecovery} para implementação de sistemas embarcados por meio de máquinas de estados.
+
+%Nenhuma outra técnica, além do temporizador \textit{watchdog} foi utilizada para aumentar a confiabilidade do sistema \cite{Kruger:2014}. dissertação de mestrado de Kruger \cite{Kruger:2014} o módulo \textit{GPS} não enviava dados para o servidor, sabendo-se que o microcontrolador \textit{mbed} pode se conectar a internet por meio desse módulo, a funcionalidade para enviar os dados coletados pela estação meteorológica será implementada nos próximos meses de execução deste trabalho, atualmente a biblioteca \textit{GPS} está com um erro de programação que fixa a execução do código em um loop infinito.
+
+
+\section{Injetor de Falhas} \label{sec:InjetorDeFalhas}
+
+A injeção de falhas é um processo importante para validar e verificar a confiabilidade de um sistema, seja por alteração de código, simulando uma falha de \textit{software} ou a nível de pinos (\textit{Pin-level Injection}), injetando falhas diretamente no hardware. A biblioteca \textit{FaultInjector} permite simular o efeito do \textit{bit-flip} em qualquer região de memória \textit{SRAM} do microcontrolador \textit{mbed} LPC1768, mas apresenta duas graves limitações: a falta de flexibilidade, por não executar em outros modelos de microcontroladores, e a impossibilidade de inserção de falhas nas regiões da memória \textit{flash}. Essas limitações são descritas respectivamente nas subseções \ref{subsec:MapDeMemoria} e \ref{subsec:InjecaoFalhasFlash}.
+
+\subsection{Mapeamento de Memória} \label{subsec:MapDeMemoria}
+
+Inicialmente, pensou-se em ampliar o uso da biblioteca \textit{FaultInjector} mediante a criação de várias versões, cada uma específica a um modelo da família LPC176X. Assim, o programador ficaria responsável por baixar a versão correta. Entretanto, conforme as pesquisas evoluíram, percebemos que era possível identificar dentro do próprio código-fonte o modelo do microcontrolador, uma vez que o compilador mantém a informação do modelo em uma \textit{define}. Com essa descoberta, foi possível criar uma única versão que automaticamente mapeia as regiões de memória.
+
+Neste primeiro passo, observando o mapa de memória da família mbed LPC176X \cite{manualLpc176x:2016} foi possível constatar que alguns modelos possuem regiões de memória idênticas, conforme mostrados na Figura \ref{Img:memoryMap}. Logo, técnicas de orientação a objetos, tais como heranças e classes abstratas poderiam ser utilizadas com o intuito de facilitar o mapeamento das regiões de memória e promover uma interface à biblioteca \textit{FaultInjector}, que precisava injetar falhas nas regiões de memória sem necessariamente conhecer os endereços das regiões de cada dispositivo.
+
+Com as regiões de memória mapeadas, o segundo passo foi a implementação desse mapeamento. A classe \textit{MemoryRegion}\cite{Kruger:2014} foi utilizada para representar as regiões de memória do \textit{mbed}. Ela contém atributos que armazenam o endereço de memória inicial, o endereço final e o tamanho (em \textit{bytes}) de cada região de memória. 
+
+A classe abstrata \textit{MemoryMap} representa o mapa de memória de um microcontrolador mbed e disponibiliza uma interface para \textit{FaultInjector} injetar falhas. Esta classe é herdada por classes não-abstratas, como a classe MemoryMap\_LPC1764 e MemoryMap\_LPC1768, que obrigatoriamente, ficam responsáveis por implementar os métodos abstratos \textit{getUserMemoryRegion()} e \textit{getFlashMemoryRegion()} de MemoryMap, descritos a seguir:
+
+\begin{itemize}
+	\item \textbf{\textit{getUserMemoryRegions()}} - método abstrato que retorta uma lista das regiões de memória disponíveis para o usuário.				
+	
+	\item \textbf{\textit{getFlashMemoryRegions()}} - método abstrato que retorta a lista de regiões endereçadas a memória \textit{flash}.
+	
+	\item \textbf{\textit{getPeripheralsMemoryRegions()}} - retorta uma lista de regiões da memória destinadas aos periféricos. Este método não é abstrato, mas pode ser sobrescrito. Entretanto, como as regiões dos periféricos do microcontrolador é comum a todos eles, não há nessecidade alguma sobrescrever este método.
+\end{itemize}
+
+Por \textit{FaultInjector} ser capaz de identificar o modelo do processador, ela mesmo é responsável por escolher qual das versões de MemoryMap irá utilizar (MemoryMap\_LPC1764, MemoryMap\_LPC1765, entre outros). Isso tornou a biblioteca flexível. [MELHORAR ESTE PARÁGRAFO]
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figuras/memoryMap.jpg}
+	\caption[Mapas das Regiões de Memória dos Modelos LPC1768/66/65/64]{Mapeamento das regiões de memória dos modelos LPC1768/66/65/64.}
+	\label{Img:memoryMap}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}
+
+
+\subsection{Injeção de Falhas na Memória Flash} \label{subsec:InjecaoFalhasFlash}
+
+Os microcontroladores \textit{mbed} possuem memória \textit{flash}, na qual o código do \textit{firmware} é armazenado \cite{manualLpc176x:2016}. Logo, a alteração de um único bit em um endereço de memória que contenha partes de uma instrução pode resultar em um falha irreversível. No entanto os dados coletados por um sistema também podem ser armazenados na memória \textit{flash}. Considerando-se o sistema embarcado de uma estação meteorológica, este precisa coletar os dados climáticos e armazená-los na memória não volátil. Estes dados armazenados na \textit{flash} são enviados a um servidor remoto após um período de tempo predefinido. Se um único bit da região de memória no qual os dados coletados estão armazenados for alterado (\textit{bit-flip}), esta alteração poderá provocar uma modificação no valor da informação armazenada que poderia ser, por exemplo, um valor da umidade do ar, que perderia a exatidão após sua alteração, ou seja, o dado coletado enviado para o servidor remoto estaria incorreto, impactando em uma equivocada previsão do tempo. 
+
+Conforme explicado na Seção \ref{sec:InjecaoDeFalhas}, um dos aspectos positivos na simulação de falhas por software é a segurança de não danificar o dispositivo. Falhas podem ser inseridas em \textit{bytes} aleatórios na memória \textit{SRAM} simulando o fenômeno bit-flip, entretanto, a mesma lógica não pode ser aplicada na memória \textit{flash}, pois por ser protegida não é possível escrever um único endereço de memória, somente a escrita por setores que são no total 29, divididos em duas áreas. A primeira, que abriga os setores do 1 ao 15 contém blocos de 4KB, a segunda, que vai do setor 16 até o 29, é composta por blocos de 32KB para cada setor \ref{manualLpc176x:2016}.
+
+A injeção de falhas na \textit{flash} foi realizada mediante a escrita de \textit{bytes} em um setor de memória sorteado aleatoriamente. Foi copiado 256 bytes da memória SRAM para a \textit{flash} utilizando uma biblioteca que permite fazer operações na memória não volátil. Esta foi retirada do repositório de bibliotecas do site \url{www.mbed.com}. Com ela, é possível escrever uma quantidade fixa de \textit{bytes} que podem ser 256, 512, 1024 ou 4096 \cite{escritaNaFlash:2016}.
+
+[O TAMANHO DOS BLOCOS DOS SETORES 1 AO 15 É DE 4KB, DO 16 AO 32KB É DE 32K, POR QUE VOCÊ ESCREVEU 256 bytes? VÃO PERGUNTAR ISSO! CERTEZA!!! CONSIGA ENTÃO UMA MANEIRA DE DEIXAR CLARO ISSO NO TEXTO]
+
+Para realizar a injeção de falhas na flash foi necessário seguir os seguintes passos:
+
+\begin{itemize}
+	\item Sortear um setor aleatório da memória flash
+	
+	\item Copiar a quantidade de bytes escolhida da memória RAM podendo variar entre 256, 512, 1024 ou 4096.
+	
+	\item Preparar o setor para escrever os bytes copiados da memória RAM determinando qual o número do setor inicial e qual o do setor final.
+	
+	\item Após a delimitação do setor inicial e final a escrita dos bytes copiados da memória serão escritos na flash
+	
+\end{itemize}
+
+Neste trabalho foi realizada a escrita de 256 bytes na memória flash, ou seja, foram injetadas 256 bytes de falha em setores aleatórios que poderiam, no momento da injeção, estar armazenando os dados coletados pelo sistema embarcado ou as instruções dele, ou seja, o valor das informações coletadas foi alterado podendo causar uma falha irreversível no sistema afetando o seu correto funcionamento.
+
+\section{FaultRecovery: Extensão da biblioteca} \label{sec:extensaoBiblioteca}
+
+Inicialmente pensou-se em ampliar a biblioteca \textit{FaultRecovery} utilizando a sua estrutura inicial, que implementa macros e funções de \textit{callback} (função executada conforme a ocorrência de um evento predefinido). No entanto, o uso de macros como funções não é uma boa prática de programação \cite{Meyers:2011}, pois além de dificultarem o entendimento da estrutura do código, criam outros males que podem resultar em falhas inesperadas. Por exemplo, uma macro que chama uma função \textit{f} para que se retorne o maior entre os argumentos, se chamada com um dos parâmetros sob incremento, pode gerar erros imprevistos, conforme mostram os Quadros \ref{Func:Macro} e \ref{Func:MacroInvocacao}.
+
+\begin{lstlisting}[label=Func:Macro,caption={[Uso de macro como função] Macro que chama \textit{f} como o máximo entre a e b}]
+#define CALL_WITH_MAX(a, b) f((a) > (b) ? (a) :(b))
+\end{lstlisting}
+
+\begin{lstlisting}[label=Func:MacroInvocacao,caption={[Macro sendo chamada no código] Na primeira invocação da macro a variável a é incrementada duas vezes e na segunda uma vez.}]
+int a = 5, b = 0;
+CALL_WITH_MAX(++a, b);
+CALL_WITH_MAX(++a, b + 10);
+\end{lstlisting}
+
+%Utilizou-se o exemplo anterior escrito por Meyers \cite{Meyers:2011} para ilustrar uma das desvantagens de se implementar macros na expansão da biblioteca \textit{FaultRecovery}.
+
+Na \textit{FaultInjector} de Kruger, as macros eram utilizadas demasiadamente, por isso algumas foram retiradas e outras substituídas por \textit{templates}. Outra modificação importante foi o emprego do padrão de projeto \textit{State}. Esse é indicado para programas que implementam máquinas de estados e teve como objetivo facilitar o uso da biblioteca, pois trouxe uma estrutura capaz de gerenciar automaticamente as mudanças de estados.
+
+\subsection{Refatoração e Aperfeiçoamento: Versão 1.0} \label{subsec:versao1}
+
+O emprego do padrão de projeto \textit{State} na refatoração da biblioteca, tem como um de seus principais objetivos forçar o usuário a implementar seu \textit{firmware} como uma máquina de estados. Embora todo \textit{firmware} seja uma máquina de estados, a maioria deles não são orientados a objetos e tão pouco legíveis. Foi Implementada uma versão dessa biblioteca para \textit{arduino} e está sendo utilizada no projeto de extensão Coxim Robótica, do Campus de Coxim - UFMS para o desenvolvimento de um robô seguidor de linha. Na figura \ref{Img:diagramaFaultRecovery} é mostrado o diagrama de classes da biblioteca \textit{FaultRecovery}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figuras/diagramaFaultRecovery.jpg}
+	\caption[Diagrama de classes da biblioteca \textit{FaultRecovery}.]{Diagrama de classe da biblioteca \textit{FaultRecovery}.}
+	\label{Img:diagramaFaultRecovery}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}
+
+O uso do padrão de projeto mencionado e a aplicação dos conceitos de orientação a objetos permitiu criar programas modularizáveis, em outras palavras, o código do \textit{firmware} pode ser separado por responsabilidades. Cada estado terá a sua classe de implementação permitindo a separação do código e facilitando o seu entendimento. A primeira versão da biblioteca possui três classes, são elas: \textit{TypeIDFactory, State} e \textit{StateMachine}, que são descritas abaixo:
+
+\begin{itemize}
+	\item \textit{\textbf{TypeIDFactory}} - Esta classe é responsável pela geração dos IDs de identificação dos estados. Os identificados são únicos e auto-incrementais. Estes IDs são utilizados para indexar os estados em um \textit{hashmap}.
+	
+	\item \textit{\textbf{State}} - Esta classe é responsável pela representação de um estado. Composta por um método abstrato \textit{run}, é a classe base para todos os estados do \textit{firmware}. No método \textit{run} o usuário implementa as rotinas de execução do estado. Caso ao final dessa rotina haja uma transição para um novo estado, o método \textit{setToState} deve ser invocado passando entre os sinais ($<$ $>$) a classe que representa o próximo estado a ser executado, conforme demonstrado no \autoref{Func:faultRecovery}. Apenas a classe é passada como parâmetro do template, uma vez que a própria  \textit{StateMachine} é responsável pela alocação dos objetos. Essa abordagem evita cópias desnecessárias e perda de desempenho.
+	
+	\item \textit{\textbf{StateMachine}} - Esta classe representa a máquina de estados e tem a responsabilidade de controlar o despacho das funções implementadas em cada estado. Funciona como uma espécie de "engrenagem", que controla as transições entre os diversos estados do sistema, instanciando e adicionando os novos estados em um \textit{hashmap} e selecionando-os a cada transição do programa. A escolha de um \textit{hashmap} deveu-se ao seu desempenho ser superior a qualquer outra estrutura de dados, uma vez que os estados são indexados pelos seus IDs.
+	
+	%Conforme mostrado na Figura X [COLOCAR UM FLUXOGRAMA QUE EXPLIQUE ESTE PROCESSO DE INDEXAÇÃO DOS ESTADOS. MOSTRE O PASSO A PASSO DA BIBLIOTECA] No momento em que o programa recebe um evento responsável pela mudança de estado, o método \textit{setToState} desta classe recebe a  em execução \textit{current} (determina o estado atual). Se o estado não estiver sido adicionado no \textit{map} de estados da máquina de estados, o método \textit{addState} será chamado para incluir esse novo estado.
+	
+	A classe \textit{StateMachine} também possui os métodos \textit{start} e \textit{run}. Para executar a máquina de estados, deve-se instanciar um objeto \textit{StateMachine} e chamar o método \textit{start}, passando entre ($<$ $>$) o estado inicial conforme demonstrado no \autoref{Func:faultRecovery}, o método \textit{start} chamará o método \textit{setToState}, que atribuirá o id do estado inicial para a variável \textit{current} e chamará o método \textit{run} que executará a máquina de estados por meio de um \textit{loop}.
+	
+\end{itemize}
+
+
+\newpage
+\begin{lstlisting}[label=Func:faultRecovery,caption={[Exemplo de criação de um estado]A classe EsperandoCarroChegar herda da classe State e tem sua rotina implementada no método run, ao encerrar a rotina o método \textit{setToState} é invocado, alterando o estado atual. No método main um objeto StateMachine é instanciado e o método \textit{start} é chamado, iniciando a máquina de estados. Este quadro tem como objetivo demonstrar a utilização da biblioteca, apenas um estado será posto no quadro, os demais serão anexados ao trabalho.}]
+
+class EsperandoCarroChegar: public State {
+void run(StateMachine &sm) {
+if (carroChegou()) {
+sm.setToState<EsperandoApertarBotao>();
+}
+}
+};
+
+int main() {
+StateMachine sm;
+sm.start<EsperandoCarroChegar>();
+}
+
+\end{lstlisting}
+
+Um exemplo simples para ilustrar a utilização da nova \textit{FaultRecovery} é o programa de estacionamento de um shopping. A entrada do estacionamento possui um emissor de \textit{tickets}, dois sensores e uma cancela. Ao se aproximar da cancela, o motorista aperta um botão para emitir um \textit{ticket}, após a emissão a cancela é aberta, os sensores detectam a entrada do carro ao interior do estacionamento e a cancela é fechada.
+
+A máquina de estados do caso ilusório é composta por quatro estados, um deles é demonstrado no \autoref{Func:faultRecovery}:
+
+\begin{itemize}
+	\item \textit{\textbf{EsperandoCarroChegar}} - Este é o estado inicial da máquina de estados. O sensor de presença detecta a chegada do veículo na entrada do estacionamento, o carro se aproxima da entrada, então o estado \textit{EsperandoCarroChegar} detecta a aproximação do veículo e chama o próximo estado.
+	
+	\item \textit{\textbf{EsperandoApertarBotao}} - Neste estado o dispositivo eletrônico emite o \textit{ticket} de estacionamento após o motorista apertar o botão. Após isto, o estado atual é alterado para \textit{EsperandoCarroEntrar}. Outra situação é quando o motorista decide não adentrar ao estacionamento, neste caso o estado é alterado para o anterior (\textit{EsperandoCarroChegar}). 
+	
+	\item \textit{\textbf{EsperandoCarroEntrar}} - Neste estado os sensores estão aguardando a entrada do carro ao estacionamento. O sensor externo ao estacionamento detecta duas situações, a primeira é quando o carro se afasta da cancela e não entra no estacionamento, neste caso a máquina de estados retorna ao seu estado inicial. O segundo é quando o carro adentra ao estacionamento, neste caso o sensor externo identifica a entrada do carro, o interno ao estacionamento detecta o carro se afastando da cancela, com o seu afastamento o sistema altera o estado para \textit{FecharCancela}.
+	
+	\item \textit{\textbf{FecharCancela}} - Neste estado o carro se afasta da entrada do estacionamento, o sensor externo a este detecta o afastamento do carro e a cancela é fechada. Ao fechar a cancela o estado \textit{FecharCancela}, por ser o último estado da máquina de estados, irá chamar o estado inicial, para então reiniciar o ciclo de execução dos estados.
+	
+\end{itemize}
+
+
+\subsection{Refatoração e Aperfeiçoamento: Versão 2.0} \label{subsec:versao2}
+
+Na subseção \ref{subsec:versao1} que trata da versão 1.0 da biblioteca, mostrou-se como implementar os estados de uma máquina de estados. Esta subseção tratará da criação dos pontos de recuperação, como inicializar a máquina de estados e quais as classes adicionas da biblioteca e suas responsabilidades. Nesta etapa de desenvolvimento, focou-se na tolerância a falhas. A versão 2.0 da biblioteca \textit{FaultRecovery} utiliza a máquina de estados desenvolvida na versão 1.0, no entanto foi adicionada a funcionalidade que possibilita a criação de pontos de recuperação de falhas. Se o microcontrolador travar no momento em que a máquina de estados esteja em execução, se algum ponto de recuperação estiver configurado, quando o microcontrolador for reinicializado pelo \textit{whatchdog} [VOCÊ EXPLICA O QUE É WHATCHDOG EM ALGUM LUGAR???] o ponto de recuperação será executado. O usuário da biblioteca poderá criar esses pontos de recuperação, se ele identificar essa necessidade, caso algum ponto de recuperação seja inserido no código, ele deverá indicar quais as rotinas deverão ser executadas, que podem ser uma determinada configuração do microcontrolador ou uma tarefa que deva ser iniciada antes da máquina de estados ser executada. 
+
+As classes \textit{Application} e \textit{RecoveryPoint} foram adicionadas a biblioteca. A primeira é responsável pela inicialização do \textit{firmware} e gerenciamento dos pontos de recuperação, a segunda é responsável pela implementação dos pontos de recuperação. Para utilizar a versão 2.0, deve-se instanciar um objeto \textit{Application} e chamar o método \textit{initialize} da seguinte forma: Application:initialize$<$EstacionamentoApp$>$. A classe EstacionamentoApp é herdada de \textit{Application} que possibilita a implementação de três métodos, sendo o método \textit{start} obrigatório, os métodos \textit{creatRecoveryPoints} e \textit{setup} são opcionais. O método \textit{initialize} é \textit{static}, ou seja, ele pode ser chamado a partir de um código externo à classe sem a necessidade de criar uma nova instância de \textit{Application}. Ao evocar o método \textit{initialize}, um objeto \textit{StateMachine} é inicializado, uma instância da classe EstacionamentoApp também é inicializada, essa será utilizada durante toda a execução da máquina de estados. Após o EstacionamentoApp ser inicializado, quatro métodos serão evocados automaticamente. 
+
+O primeiro é o método \textit{setup} que poderá ou não ser implementado. Neste método são implementadas as configurações do microcontrolador, que podem variar dependendo do seu modelo, vale ressaltar que a utilização desta biblioteca não se limita ao microcontrolador \textit{mbed}, pois os extensionistas do projeto Coxim Robótica do Campus de Coxim - UFMS já estão utilizando a arquitetura da biblioteca \textit{FaultRecovery} adaptada para a plataforma \textit{arduino}, por exemplo, no método \textit{setup} os extensionistas programaram as configurações iniciais de um robô seguidor de linha.
+
+O segundo é o método \textit{createRecoveryPoints}, que poderá ou não ser implementado [VÃO LHE PERGUNTAR POR QUE PODE OU NÃO SER IMPLEMENTADO??? É MELHOR EXPLICAR QUE ESTE MÉTODO POR PADRÃO NÃO ADICIONA PONTO DE RECUPERAÇÃO NENHUM, MAS QUE PODE SER SOBRESCRITO PARA QUE ADICIONE PONTOS DE RECUPERAÇÃO]. Nesse método os pontos de recuperação são adicionados a máquina de estados. Para implementar um ponto de recuperação deve-se criar uma classe que herde de \textit{RecoveryPoints}. Ao herdar dessa classe, o usuário obrigatoriamente deverá implementar o método abstrato \textit{run} no qual conterá as rotinas de execução caso o programa seja restaurado daquele ponto. Para adicionar um ponto de recuperação a máquina de estados, deve-se utilizar o método \textit{addRecoveryPoint} nativo da classe \textit{StateMachine} e evocá-lo conforme demonstrado no quadro \autoref{Func:addRecoveryPoint}.
+
+[VÃO PERGUNTAR: COMO FUNCIONA ESSE PONTO DE RECUPERAÇÃO? COMO ELE SABE ONDE TRAVOU E ONDE TEM QUE VOLTAR?? VOCÊ NÃO FALA EM NENHUM MOMENTO (SÓ NA DESCRIÇÃO DO QUADRO ABAIXO NÃO VALE) QUE NO SETTOSTATE ALÉM DELE TROCAR O ESTADO, ELE TAMBÉM GUARDA ESSE PONTO NA MEMÓRIA FLASH, E VOCÊ TAMBÉM NÃO EXPLICA COMO OS PONTOS DE RESTAURAÇÃO FICAM ASSOCIADOS AOS ESTADOS DO SEU PROGRAMA].
+
+O terceiro é o método \textit{start} no qual é realizada a inicialização da máquina de estados conforme demonstrada no segundo parágrafo desta subseção.
+
+TROQUE O PRÓXIMO EXEMPLO (O DO PONTO DE RECUPERAÇÃO) PELO PONTO DE RECUPERAÇÃO DO MOMENTO "FECHAR A CANCELA" (RECOVERYFECHARCANCELA). EXPLIQUE QUE SE A ENERGIA TIVESSE ACABADO DURANTE O FECHAMENTO DA CANCELA E O PROGRAMA TIVESSE VOLTADO COM A CANCELA ABERTA, O DONO DO PREJUÍZO IRIA TER PREJUÍZO, POIS O PROGRAMA VOLTARIA SEM FECHAR A CANCELA, DEIXANDO TODO MUNDO ENTRAR SEM PAGAR... ESSE EXEMPLO TEM MAIS PESO!
+
+\begin{lstlisting}[label=Func:addRecoveryPoint,caption={[Métodos \textit{createRecoveryPoints} e \textit{run}]Este quadro demonstra a implementação do método \textit{createRecoveryPoints} implementado no EstacionamentoApp que herda de \textit{Application}. O ponto de recuperação é criado quando o método \textit{addRecoveryPoint} é evocado, percebe-se que existem duas classes separadas por vírgula e entre $<$$>$, a primeira é a implementação do ponto de recuperação, ou seja, a classe que herda de \textit{RecoveryPoints}. A segunda é a classe que representa o estado que deverá ser executado após a reinicialização do microcontrolador, ou seja, caso ele inicie neste ponto de recuperação o estado EsperandoCarroEntrar deverá ser escutado. No método \textit{run} da classe RecoveryEsperandoCarroEntrar encontra-se o código que será executado caso o microncontrolador falhe no momento em que o carro iria entrar no estacionamento. Pois se a energia acabar neste momento, quando o firmware for executado novamento, o ponto de recuperação verificará se o portão está fechado, caso sim, o portão será aberto e a máquina de estados será iniciada novamente a partir do estado EsperandoCarroEntrar, caso não, o portão continuará aberto e máquina de estados será executada novamente.}]
+//Estacionamento App Class
+void EstacionamentoApp::createRecoveryPoints(StateMachine &sm) {
+sm.addRecoveryPoint<RecoveryFecharCancela, FecharCancela>();
+}
+
+//RecoveryFecharCancela Class
+void RecoveryFecharCancela::run(StateMachine &sm) {
+if (checarPortaoAberto()) {
+fecharPortao();
+}
+sm.start<EsperandoCarroEntrar>();
+}
+\end{lstlisting}
+
+\section{\textit{Classe de Redundância de Dados: TData}} \label{sec:classeTData}
+A classe \textit{TData} foi implementada com o objetivo de obter-se uma redundância de dados automatizada, tanto para variáreis primitivas (int, float, long, double, char, bool), quanto para objetos de uma classe. Existem duas maneiras de se criar um objeto \textit{TData}, a primeira é utilizando tipos primitivos e a segunda objetos. 
+
+Ao instanciar um objeto \textit{TData}, deve-se especificar o seu tipo e passar um valor, se o objeto for do tipo primitivo, ou um objeto no construtor: TData$<$tipo\_da\_variável$>$ variavel(valor). Ou o valor, ou o objeto passado como parâmetro serão copiados para três cópias de segurança, das quais serão utilizadas para manter a integridade do valor original por meio de um sistema de votação, que verifica se os valores das cópias são consistentes. A classe \textit{TData} funciona tanto em variáveis homogêneas (tipos primitivos) quanto em heterogêneas (objetos).
+
+\subsection{Classe TData com Tipos Primitivos} \label{subsec:TDataPrimitivo}
+
+Pode-se verificar no \autoref{Func:TDataPrimitivo} um exemplo de utilização da classe \textit{TData} com uma variável de tipo primitivo. O método \textit{setData} será invocado automaticamente ao passar o número inteiro 4 como parâmetro no construtor da classe. 
+
+Ao alterar o valor 4 para a operação 1 + 9, o método \textit{setData} será implicitamente chamado por meio de sobrescrita de operadores, disponível na linguagem C++, possibilitando que o valor da variável seja alterado conforme o código de exemplo demonstrado no \autoref{Func:TDataPrimitivo}, o resultado desse código pode ser visualizada na Figura \ref{Img:tdataPrimitivo}. Vale ressaltar que a cada vez que o objeto \textit{TData} for acessado, o método \textit{getByVotting()} que implementa um esquema de votação será executado, validando todas as cópias do objeto \textit{TData}. 
+
+A injeção de falhas foi realizada com um método temporário chamado \textit{injectFault} no qual uma das cópias sofreu uma modificação em seu valor simulando o fenômeno \textit{bit-flip}, este método pode ser visto no \autoref{Func:TDataFalhaPrimitivo}.
+
+[QUANDO FOR FALAR DA Figura X, ESSE F É MAIÚSCULO. INDENTE ESSES CÓDIGOS TAMBÉM. MAS SE QUISER TIRAR UM POUCO DOS CÓDIGOS, PODE RETIRAR ESSE AQUI, DEIXE SÓ A IMAGEM ABAIXO... CONTANTO QUE EXPLIQUE ELA BEM!!]
+
+\begin{lstlisting}[label=Func:TDataPrimitivo,caption={[Exemplo de utilização da classe TData para variáveis de tipo primitivo.]Exemplo de utilização da classe TData para variáveis do tipo primitivo.}]
+int main() {
+
+TData<int> variavel(4);
+cout << "Valor inicial da variável" << endl;
+cout << "variavel: " << variavel << endl;
+
+cout <<"Alterando o valor da variável de 4 para 10" << endl;
+variavel = 1 + 9;
+cout << "variavel: " << variavel << endl;
+
+//injetando falha
+variavel.injectFault();
+cout <<"Valor da variável após a injeção de falha" << endl;
+cout << "variavel: " << variavel << endl;
+
+//imprime os dados armazenados nas 3 cópias
+cout << "Valores armazenados nas 3 cópias após a injeção de falha" << endl;
+variavel.print();
+}
+\end{lstlisting}
+
+[RETIRA ESSE TAMBÉM. APENAS DIGA NO TEXTO QUE VOCÊ INJETOU FALHA EM UMA DAS CÓPIAS DA VARIÁVEL]
+
+\begin{lstlisting}[label=Func:TDataFalhaPrimitivo,caption={[Método utilizado para injeção de falhas em uma das cópias da classe TData.] Este método pode ser implementado dentro da classe TData para simular um bit-flip.}]
+template<class T>
+void TData<T>::injectFault() {d1 = 3000;}
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figuras/tdataPrimitivo.jpg}
+	\caption[Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaPrimitivo}.]{Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaPrimitivo}.}
+	\label{Img:tdataPrimitivo}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}	
+
+
+\subsection{Um Exemplo Ilusório Para Utilização da Classe TData com Objetos} \label{subsec:exemploTData}
+
+[SERIA LEGAL VOCÊ EXPLICAR NO COMEÇO DESTE CAPÍTULO QUE OS EXEMPLOS DADOS SERÃO DIVERSIFICADOS PORQUE VOCÊ PENSOU EM CRIAR UMA BIBLIOTECA GENÉRICA UTILIZADA NOS MAIS VARIADOS CASOS. DEIXE CLARO QUE ESSA COISA DE "CADA HORA UM EXEMPLO NOVO" É REALMENTE SUA INTENSÃO. SENÃO ALGUÉM PODE CRITICAR... EXALTE QUE A INTENÇÃO NESTE PROJETO É UTILIZAR A LIB DESDE O SISTEMA EMBARCADO DE ESTACIONAMENTO ATÉ A ROBÓTICA]
+
+Para demonstrar como utilizar e instanciar a classe \textit{TData} com objetos, foi utilizado um exemplo que permitiu a utilização de objetos heterogêneos, ou seja, objetos que possuem outros objetos dentro de si, que podem ser objetos de pilha ou ponteiros para um endereço de memória. Destaca-se, um caso ilusório de um automóvel inteligente interligado a diferentes tipos de dispositivos e formas de comunicação, comunicando-se a um servidor. 
+
+As informações disponibilizadas pelo veículo são navegação, diagnósticos do funcionamento do próprio veículo, dentre outras informações. Este por sua vez sofre um acidente e o sistema se encarrega de acionar outro sistema, ou seja, o sistema embarcado instalado no carro se comunica com outro remotamente. Este, por sua vez, receberia todos os dados relativos ao paciente, inclusive sua localização para um possível deslocamento de ambulâncias (REFERENCIAR). Este exemplo foi implementado de maneira simples com o objetivo de demonstrar como instanciar e utilizar a classe \textit{TData}. 
+
+Foram criadas duas classes para compor o cenário, sendo elas as classes Carro e Emergência, essas classes tiveram seus operadores de igualdade implementados pois, a classe \textit{TData} obriga que suas implementações sejam realizadas. Essas podem ser visualizadas no \autoref{Func:Carro} e no \autoref{Func:Emergencia} respectivamente. Mas por que os operadores de igualde precisam ser implementados? Porque o método de votação \textit{getByVotting} realiza algumas comparações entre as cópias da classe TData, cada cópia é um objeto do tipo especificado pelo usuário (TData$<$tipo\_especificado\_pelo\_usuario$>$), esse método é demonstrado no \autoref{Func:TData}. NA VERDADE CLEITON, ELES PRECISAM SER IMPLEMENTADOS PORQUE O COMPILADOR NÃO É CAPAZ DE DEFINIR O COMPORTAMENTE DE UMA OPERAÇÃO DE IGUALDADE EM UM OBJETO [ADICIONE ESSA JUSTIFICATIVA]. CADA OBJETO DEFINE A IGUALDADE DE UM JEITO DIFERENTE, A CLASSE STRING POR EXEMPLO, DEFINE QUE IGUALDADE SÃO OBJETOS COM O MESMO CONTEÚDO, MESMO QUE SEJAM OBJETOS DISTINTOS, OU SEJA, EM DIFERENTES POSIÇÃO DE MEMÓRIA.
+
+A implementação dos operadores de igualdade para tipos primitivos não é obrigatória pois são tipos homogêneos, já os objetos podem ter outros objetos em seu escopo, como é o exemplo da classe Carro (\autoref{Func:Carro}) que contém uma instância da classe Emergência (\autoref{Func:Emergencia}) em seu escopo, tornando obrigatória a implementação de seus operadores de igualdade.
+
+[NAO ACHO QUE ESSE CÓDIGO SEJA NECESSÁRIO]
+
+\begin{lstlisting}[label=Func:Emergencia,caption={[Classe Emergencia.] Classe de exemplo que contém as informações dos contatos de emergência.}]
+class Emergencia {
+public:
+Emergencia() {telefoneHospital = 0;}
+virtual ~Emergencia() {}
+
+bool operator==(Emergencia e) { return telefoneHospital == e.getTelefoneHospital() }
+
+bool operator!=(Emergencia e) { return telefoneHospital != e.getTelefoneHospital() }
+
+unsigned int getTelefoneHospital() {return telefoneHospital;}
+
+void setTelefoneHospital(unsigned int telefoneHospital) {this->telefoneHospital = telefoneHospital;}
+
+private:
+unsigned int telefoneHospital;
+};
+
+\end{lstlisting}
+
+\newpage
+
+[ACERTA SEUS IF, DEIXA DE SER BAIANO, EM VEZ DE FAZER: 
+%bool operator==(Carro c) {if (localizacao == c.getLocalizacao() && emergencia == c.getEmergencia()) {
+%		return true;}return false;}
+FAÇA:
+%bool operator==(Carro c) { return localizacao == c.getLocalizacao() && emergencia == c.getEmergencia() }
+
+%localizacao == c.getLocalizacao() && emergencia == c.getEmergencia() JÁ É UMA EXPRESSÃO LÓGICA QUE RETORNA UM BOOLEANO.
+]
+
+[MAS MESMO ASSIM, ACHO QUE ESSES CÓDIGOS PODEM SER COLOCADOS SÓ NO ANEXO. DEIXE SÓ A IMAGEM DE COMPROVAÇÃO DO TESTE. SÓ EXPLICA O QUE VOCÊ FEZ MESMO]
+
+\begin{lstlisting}[label=Func:Carro,caption={[[Classe Carro sem ponteiro.] Neste quadro é mostrado um exemplo da classe Carro sem a utilização de ponteiros.}]
+class Carro {
+public:
+
+Carro() {localizacao = 0;}
+
+virtual ~Carro() {}
+
+bool operator==(Carro c) {if (localizacao == c.getLocalizacao()&& emergencia == c.getEmergencia()) {
+return true;}return false;}
+
+bool operator!=(Carro c) {if (localizacao != c.getLocalizacao()&& emergencia!= c.getEmergencia()) {
+return true;}return false;}
+
+void setLocalizacao(unsigned int localizacao) {
+this->localizacao = localizacao;
+}
+
+unsigned int getLocalizacao() {return this->localizacao;}
+
+Emergencia& getEmergencia() {return emergencia;}
+
+void setEmergencia(Emergencia& emergencia) {this->emergencia = emergencia;}
+
+private:
+unsigned int localizacao;
+Emergencia emergencia;
+};
+
+\end{lstlisting}
+
+
+\subsection{Classe Carro com Objeto de Pilha} \label{subsec:classeObjetoPilha}
+
+Para instanciar um objeto TData do tipo Carro, primeiro deve-se declarar um objeto carro e setar os valores de seus atributos conforme demonstrado no \autoref{Func:CarroSaida} e consecutivamente instanciar um objeto TData do tipo carro passando o objeto carro recém criado como parâmetro no construtor da classe com os seus valores preenchidos. 
+
+Para este exemplo utilizou-se as classes Carro e Emergencia dos quadros anteriores. No \autoref{Func:CarroSaida} o método \textit{injectFault} é invocado para simular o fenômeno \textit{bit-flip}, ou seja, se apenas um bit for alterado no endereço de memória no qual está localizada a variável localizacao demonstrada no \autoref{Func:Carro}, o valor da localização do carro seria alterado. A injeção de falhas foi realizada com métodos temporários implementados dentro da classe \textit{TData} alterando os valores do telefone do hospital pertencente a classe Emergencia (\autoref{Func:Emergencia}) e da localização do carro pertencente a classe Carro (\autoref{Func:Carro}), essa simulação de falha pode ser visualizada no \autoref{Func:TDataFalhaObjetoPilha}. 
+
+O carro possui um sistema inteligente interligado com outros sistemas, ao sofrer o acidente automaticamente o sistema embarcado instalado no carro iria se conectar a outro sistema pedindo socorro e enviando sua localização para o hospital, essa por sua vez poderia ser alterada por alguma falha em seu endereço de memória podendo causar a morte do motorista, pois a ambulância seria enviada para outro endereço que não fosse o do carro. Após a injeção de falhas, os valores  de todas as cópias podem ser visualizados na figura \ref{Img:tdataObjetoPilha} demonstrando que mesmo após a ocorrência de falhas nos endereços de memória da localização e do telefone do hospital, as cópias continuaram consistentes.
+
+\begin{lstlisting}[label=Func:CarroSaida,caption={[Método que demonstra integridade dos dados de localização do veículo após a injeção de falhas.] Neste quadro é mostrado o  método main(), que após ser executado, mostra os dados de localização do veículo íntegros após a injeção de falhas.}]
+#include "TData.h"
+#include "Carro.h"
+using namespace std;
+int main() {
+//objeto
+Carro carro;
+carro.setLocalizacao(100);
+carro.getEmergencia().setTelefoneHospital(12345);
+
+//objeto TData recebendo o objeto carro como parâmetro
+TData<Carro> dataCarro(carro);
+
+//injeção de falhas
+dataCarro.injectFault();
+
+cout << "Localização original: " << dataCarro.getData().getLocalizacao()<< endl;
+cout << "Telefone do Hospital original: "
+<< dataCarro.getData().getEmergencia().getTelefoneHospital() << endl;
+
+//imprime os dados armazenados nas 3 cópias
+cout << "Valores armazenados nas 3 cópias após a injeção de falhas" << endl;
+dataCarro.print();
+}
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[label=Func:TDataFalhaObjetoPilha,caption={[Método utilizado para injetar falhas em uma das cópias da classe TData]. Método utilizado para injetar falhas em uma das cópias da classe TData. Este método pode ser implementado dentro da classe TData para simular um bit-flip.}]
+template<class T>
+void TData<T>::injectFault() {d1.getEmergencia().setTelefoneHospital(9876543);d1.setLocalizacao(200);}
+\end{lstlisting}
+
+[VOCÊ PODE DEIXAR SÓ ESTA IMAGEM ABAIXO]
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figuras/tdataObjetoPilha.jpg}
+	\caption[Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaObjetoPilha}.]{Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaObjetoPilha}.}
+	\label{Img:tdataObjetoPilha}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}
+
+\subsection{Classe Carro com Ponteiro} \label{subsec:CarroPonteiro}
+
+[AQUI VOCÊ PODERIA EM VEZ DE COLOCAR O CÓDIGO APENAS EXPLICAR QUE FUNCIONA COM PONTEIROS TAMBÉM. EXPLIQUE COMO VOCÊ FEZ, MAS NÃO PRECISA MOSTRAR O CÓDIGO, DEIXE NOS APÊNDICES]
+
+Este parágrafo tem por objetivo demonstrar que a classe TData também funciona com ponteiros. A classe TData também pode receber como parâmetro em seu construtor objetos que contenham referência para endereços de memória. Realizou-se uma alteração na variável emergencia (\autoref{Func:Carro} linha 52) para que ela se tornasse um  endereço de memória que pode ser visualizado na linha 52 do \autoref{Func:CarroPonteiro}. Na linha 15 do \autoref{Func:CarroPonteiroSaida} o método \textit{injectFault} está simulando uma injeção de falhas no endereço de memória do ponteiro emergencia. Após a injeção de falhas, a saída do código demonstrado no \autoref{Func:CarroPonteiroSaida} é mostrado na figura \ref{Img:tdataPonteiro}, mostrando que mesmo após a modificação do endereço de memória do ponteiro emergencia em uma das cópias, o valor do telefone do hospital continua o mesmo para todas elas.
+
+
+\begin{lstlisting}[label=Func:CarroPonteiro,caption={[Classe Carro com ponteiro.]Classe de exemplo que contém os dados de localização e as informações dos contatos de emergência. Esta classe foi modificada com a intenção de testar sua eficiência com diferentes tipos de objetos, o atributo emergencia foi alterado para um ponteiro.}]
+class Carro {
+public:
+
+Carro() {localizacao = 0; emergencia = new Emergencia();}
+
+virtual ~Carro() {}
+
+bool operator==(Carro c) {if (localizacao == c.getLocalizacao() && emergencia == c.getEmergencia()) {return true;}return false;}
+
+bool operator!=(Carro c) {if (localizacao != c.getLocalizacao() && emergencia!= c.getEmergencia()) {return true;}return false;}
+
+void setLocalizacao(unsigned int localizacao) {this->localizacao = localizacao;}
+
+unsigned int getLocalizacao() {return this->localizacao;}
+
+Emergencia *getEmergencia() {return emergencia;}
+
+void setEmergencia(Emergencia *emergencia) {this->emergencia = emergencia;}
+
+private:
+unsigned int localizacao;
+Emergencia* emergencia;
+};
+
+\end{lstlisting}
+
+\begin{lstlisting}[label=Func:CarroPonteiroSaida,caption={[Método que implementada a utilização de um objeto TData do tipo Carro com um ponteiro para um enredeco de memória em seu escopo.]Método que implementada a utilização de um objeto TData do tipo Carro com um ponteiro para um enredeço de memória em seu escopo  e injeta falhas para verificar a integridade dos dados de localização do veículo.}]
+#include "TData.h"
+#include "Carro.h"
+
+using namespace std;
+
+int main() {
+Carro carro;
+carro.setLocalizacao(100);
+carro.getEmergencia()->setTelefoneHospital(123456);
+
+//objeto TData recebendo o objeto carro como parâmetro
+TData<Carro> dataCarro(carro);
+
+//injeção de falhas
+dataCarro.injectFault();
+
+cout << "Localização original: " << dataCarro.getData().getLocalizacao()
+<< endl;
+cout << "Telefone do Hospital original: "
+<< dataCarro.getData().getEmergencia()->getTelefoneHospital() << "\n"
+<< endl;
+
+//imprime os dados armazenados nas 3 cópias
+cout << "Valores armazenados nas 3 cópias após a injeção de falha" << endl;
+dataCarro.print();
+
+}
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[label=Func:TDataFalhaPonteiro,caption={[Método utilizado para simular uma falha na localização do carro.]Método utilizado para injeção de falhas. Este método pode ser implementado dentro da classe TData para simular um bit-flip.}]
+template<class T>
+void TData<T>::injectFault() {Emergencia* e = new Emergencia(); d1.setEmergencia(e); d1.setLocalizacao(200);}
+}
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figuras/tdataPonteiro.jpg}
+	\caption[Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaPonteiro}.]{Figura que apresenta a saída com os valores das cópias consistentes após a injeção de falhas do \autoref{Func:TDataFalhaPonteiro}.}
+	\label{Img:tdataPonteiro}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}
+
+Observa-se que no exemplo do \autoref{Func:CarroPonteiroSaida} o objeto carro foi instanciado, teve os seus atributos preenchidos, para então ser passado como parâmetro no objeto \textit{TData} e ser replicado para todas as cópias dessa classe. Mas além das três cópias de segurança que compõem a classe \textit{TData} há mais uma cópia chamada \textit{dataObject} (\autoref{Func:TDataDataObject}), que é utilizada para atualizar o objeto \textit{TData} sem a necessidade de modificar o objeto carro e passá-lo como parâmetro para o método \textit{setData}, ou seja, pode-se acessar uma das cópias, modificá-la e replicar esta alteração para as demais cópias conforme demonstrado no \autoref{Func:TDataGetDataObject}. Para acessar o objeto \textit{dataObject}  é necessário chamar o método \textit{getDataObject} implementado para atualizar as três cópias e executar o método \textit{getByVotting} para manter a consistência de todas as cópias. Um exemplo de utilização do método \textit{getDataObjeto} pode ser visualizado no \autoref{Func:TDataGetDataObjectSaida}. A saída do código desse quadro é demonstrada na figura (tal).
+
+\begin{lstlisting}[label=Func:TDataDataObject,caption={[Objetos que representam a redundância de dados da classe TData]Os objetos d1, d2 e d3 são utilizados para a redundância de dados e o objeto \textit{dataObject} é utilizadado para atulizar os valores de todas as cópias.}]
+private:
+
+T d1;
+T d2;
+T d3;
+T dataObject;
+\end{lstlisting}
+
+\begin{lstlisting}[label=Func:TDataGetDataObject,caption={[Método responsável pela redundância de dados.] Método reponsável pela atualização de todas cópias da classe \textit{TData}.}]
+template<class T>
+T* TData<T>::getDataObject() {
+d1 = dataObject;
+d2 = dataObject;
+d3 = dataObject;
+dataObject = getByVotting();
+return &dataObject;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[label=Func:TDataGetDataObjectSaida,caption={[Teste realizado verificar a integridade dos dados de localização do carro] O objeto carro foi instanciado com os valores iniciais declarados no seu construtor \autoref{Func:CarroPonteiro} e foi passado como parâmetro no objeto \textit{TData}. Ao acessar o método \textit{getDataObject} obtém-se como retorno uma referência para o objeto \textit{dataObject} permitindo que se possa alterar os valores de seus atributos e atualizar as cópias com os novos dados.}]
+int main() {
+Carro carro;
+//carro.setLocalizacao(100);
+//carro.getEmergencia()->setTelefoneHospital(123456);
+
+//objeto TData recebendo o objeto carro como parâmetro
+TData<Carro> dataCarro(carro);
+
+//o objeto dataCarro pode ser alterao utilizando o método getDataObject()
+dataCarro.getDataObject()->setLocalizacao(100);
+dataCarro.getDataObject()->getEmergencia()->setTelefoneHospital(123456789);
+
+//injeção de falhas
+dataCarro.injectFault();
+
+cout << "Localização original: " << dataCarro.getDataObject()->getLocalizacao()
+
+<< endl;
+cout << "Telefone do Hospital original: "
+<< dataCarro.getDataObject()->getEmergencia()->getTelefoneHospital() << "\n"
+<< endl;
+
+//imprime os dados armazenados nas 3 cópias
+cout << "Valores armazenados nas 3 cópias após a injeção de falha" << endl;
+dataCarro.print();
+
+}
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figuras/tdataSetando.jpg}
+	\caption[Figura que apresenta a saída com os valores das cópias consistentes após a atualização do objeto \textit{TData} do tipo carro e da injeção de falhas do \autoref{Func:TDataGetDataObjectSaida}.]{Figura que apresenta a saída com os valores das cópias consistentes após a atualização do objeto \textit{TData} do tipo carro e da injeção de falhas do \autoref{Func:TDataGetDataObjectSaida}.}
+	\label{Img:tdataSetando}	
+	%width=0.5\textwidth (Tamanho da Imagem)
+\end{figure}

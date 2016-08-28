@@ -1,0 +1,23 @@
+%====================================================================================================
+% FaultRecovery: A ampliação da biblioteca de tolerância a falhas
+%====================================================================================================
+% TCC
+%----------------------------------------------------------------------------------------------------
+% Autor				: Cleiton Gonçalves de Almeida
+% Orientador		: Kleber Kruger
+% Instituição 		: UFMS - Universidade Federal do Mato Grosso do Sul
+% Departamento		: CPCX - Sistema de Informação
+%----------------------------------------------------------------------------------------------------
+% Data de criação	: 10 de Maio de 2016
+%====================================================================================================
+
+\chapter*{Abstract}
+
+Currently, humans use various electronic devices such as mobile phones, MP3 players, televisions, tablets, and other devices used in aid of daily activities and improving the quality of life. Thanks to expansion of ubiquitous computing, embedded systems that cover a lot of computer systems are increasingly present in daily life. However these systems can malfunction, indicating a system's inability to perform a certain task because of errors in a device component or the environment, which in turn, failures are caused by \cite{Nelson:1990}. According to Nelson \cite{Nelson:1990} a fault is an abnormal condition. The causes are associated with damage to any component, rust or other deterioration; and external disturbances, such as harsh environmental conditions, electromagnetic interference, ionizing radiation, or misuse of the system.
+
+The objectives of this study was to investigate possible causes of failures in embedded systems, modify the FaultInjector eFaultRecovery libraries. Including creating a data redundancy class in which its function is to ensure the data integrity of an embedded system. One of the modifications is designed to allow the user to develop a state machine in which each state may be implemented independently of the others. Before the FaultRecovery would not give the user a ready development framework, it has now been modified to meet a design pattern called State.
+
+At the end, the results are presented showing the execution time after the changes made in FaultRecovery library to see if the changes have impacted the library performance. The test with FaultRecovery was run at 5.0883, while on average the test without the library was run in 4.41 seconds, which is the library increased the test runtime performed in 0.67 seconds. However the library was exposed to disaster recovery testing, proving to be effective in all tests. The class was also exposed to the performance tests and data redundancy, which results in not used the TData the average run time was 0.0614 seconds, while the tests with TData the average time was 0.3272 seconds TData the class raised the test runtime 0.2658 seconds. However the first result average flaws found was 44\% while the second was 0\%.
+
+As a result of this work, the library FaultRecovery modification idea is being used by the extension project Cushion Robotics based in UFMS - Campus cushion in the development of a program for a line follower cart and will be used in future programs. a class that allows the use of data redundancy in an embedded system, which will be inserted in FaultRecovery library that will allow the user to set up your embedded system to recover from faults and can also protect your important data was also created.
+

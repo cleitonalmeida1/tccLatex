@@ -1,0 +1,300 @@
+\begin{thebibliography}{10}
+
+\bibitem{Nelson:1990}
+NELSON, V.~P.
+\newblock Fault-tolerant computing: Fundamental concepts.
+\newblock {\em Computer}, Los Alamitos, CA, USA, v. 23, \newblock p. 19--25,
+  jul 1990.
+
+\bibitem{Cunha:2007}
+CUNHA, A.
+\newblock O que são sistemas embarcados, 2007.
+
+\bibitem{Kruger:2014}
+KRUGER, K.
+\newblock {\em Programação de microcontroladores utilizando técnicas de
+  tolerância a falhas}.
+\newblock 2014.
+\newblock Disserta\c{c}\~ao de Mestrado - UFMS, Campo Grande, 2014.
+
+\bibitem{Malvino:1985}
+MALVINO, A.
+\newblock {\em Microcomputadores e microprocessadores}.
+\newblock McGraw-Hill, 1985.
+
+\bibitem{Patterson:2007}
+PATTERSON, D.~A.; HENNESSY, J.~L.
+\newblock {\em Computer organization and design: The hardware/software
+  interface}.
+\newblock 3rd. ed. San Francisco, CA, USA: Morgan Kaufmann Publishers Inc.,
+  2007.
+
+\bibitem{Chetan:2005}
+CHETAN, S.; RANGANATHAN, A.; CAMPBELL, R.
+\newblock Towards fault tolerance pervasive computing.
+\newblock {\em Technology and Society Magazine, IEEE}, v. 24, n. 1, \newblock
+  p. 38--44, Spring 2005.
+
+\bibitem{Johnson:1984}
+JOHNSON, B.
+\newblock Fault-tolerant microprocessor-based systems.
+\newblock {\em Micro, IEEE}, v. 4, n. 6, \newblock p. 6--21, dec 1984.
+
+\bibitem{Reis:2004}
+REIS, E.
+\newblock {\em Previs{\~a}o de doen{\c{c}}as de plantas}.
+\newblock UPF EDITORA, 2004.
+
+\bibitem{Iaione:1999}
+IAIONE, F.; LIMA, D.~G.; GASSEN, F.~R.
+\newblock Equipamento para coleta de dados e previsão de doenças na lavoura,
+  1999.
+
+\bibitem{Hsueh:1997}
+HSUEH, M.-C.; TSAI, T.~K.; IYER, R.~K.
+\newblock Fault injection techniques and tools.
+\newblock {\em Computer}, Los Alamitos, CA, USA, v. 30, n. 4, \newblock p.
+  75--82, apr 1997.
+
+\bibitem{Ziegler:1996}
+ZIEGLER, J.
+\newblock Terrestrial cosmic rays.
+\newblock {\em IBM Journal of Research and Development}, v. 40, n. 1, \newblock
+  p. 19--39, Jan 1996.
+
+\bibitem{Thomas:1996}
+TADEU, T.~G.; GALVãO, L. E.~M.
+\newblock Um estudo exploratório sobre sistemas operacionais embarcados.
+\newblock Technical Report~1, Instituto de Ciência e Tecnologia da
+  Universidade Federal de São Paulo - UNIFESP, 2014.
+
+\bibitem{Kanawati:1995}
+KANAWATI, G.; KANAWATI, N.; ABRAHAM, J.
+\newblock Ferrari: a flexible software-based fault and error injection system.
+\newblock {\em Computers, IEEE Transactions on}, v. 44, n. 2, \newblock p.
+  248--260, Feb 1995.
+
+\bibitem{Weber:2002}
+WEBER, T.~S.
+\newblock Um roteiro para exploração dos conceitos básicos de tolerância a
+  falhas.
+\newblock Publicação online, 2002.
+\newblock Disponível em:
+  $<$http://www.inf.ufrgs.br/~taisy/disciplinas/textos/Dependabilidade.pdf$>$
+  Acesso em: 15/11/2015.
+
+\bibitem{Velazco:2007}
+VELAZCO, R.; FOUILLAT, P.; REIS, R.
+\newblock {\em Radiation effects on embedded systems}.
+\newblock Dordrecht: Springer, 2007.
+
+\bibitem{LaprieAcidente:1990}
+LAPRIE, J.~C.; ARLAT, J.; BEOUNES, C.; KANOUN, K.
+\newblock Definition and analysis of hardware- and software-fault-tolerant
+  architectures.
+\newblock {\em Computer}, v. 23, n. 7, \newblock p. 39--51, July 1990.
+
+\bibitem{Stassinopoulos:1988}
+STASSINOPOULOS, E.; RAYMOND, J.~P.
+\newblock The space radiation environment for electronics.
+\newblock {\em Proceedings of the IEEE}, v. 76, n. 11, \newblock p. 1423--1442,
+  Nov 1988.
+
+\bibitem{Boudenot:2007}
+BOUDENOT, J.~C.
+\newblock {\em Radiation space environment}.
+\newblock Springer.
+\newblock p. 1--9.
+
+\bibitem{cinturao}
+Cinturão de van allen.
+\newblock Disponível em:
+  $<$http://geocities.ws/saladefisica5/leituras/vanallen.html$>$ Acesso em:
+  17/11/2015.
+
+\bibitem{Mansoori:2013}
+MANSOORI, A.; KHAN, P.; BHAWRE, P.; GWAL, A.; PUROHIT, P.
+\newblock Variability of tec at mid latitude with solar activity during the
+  solar cycle 23 and 24.
+\newblock In: .
+\newblock c2013.
+\newblock p. 83--87.
+
+\bibitem{ZieglerLandFord:1979}
+ZIEGLER, J.; LANFORD, W.
+\newblock {\em The effect of cosmic rays on computer memories}.
+\newblock Science, 1979.
+\newblock v.  206.
+
+\bibitem{Woods:1978}
+MAY, T.~C.; WOODS, M.~H.
+\newblock A new physical mechanism for soft errors in dynamic memories.
+\newblock In: .
+\newblock c1978.
+\newblock p. 33--40.
+
+\bibitem{Yu:2008}
+YU, H.; FAN, X.; NICOLAIDIS, M.
+\newblock Design trends and challenges of logic soft errors in future
+  nanotechnologies circuits reliability.
+\newblock In: .
+\newblock c2008.
+\newblock p. 651--654.
+
+\bibitem{Ecoffet:1994}
+ECOFFET, R.; DUZELLIER, S.; TASTET, P.; AICARDI, C.; LABRUNEE, M.
+\newblock Observation of heavy ion induced transients in linear circuits.
+\newblock In: .
+\newblock c1994.
+\newblock p. 72--77.
+
+\bibitem{Avizienis:1984}
+AVIZIENIS, A.; KELLY, J.
+\newblock Fault tolerance by design diversity: Concepts and experiments.
+\newblock {\em Computer}, v. 17, n. 8, \newblock p. 67--80, Aug 1984.
+
+\bibitem{VonNewmann:1956}
+VON NEUMANN, J.
+\newblock Probabilistic logics and the synthesis of reliable organisms from
+  unreliable components.
+\newblock {\em Automata Studies}, p. 43--98, 1956.
+
+\bibitem{Pego:2014}
+PEGO, M.~O.
+\newblock {\em Tolerância a falhas através de escalonamento em um sistema
+  multiprocessado}.
+\newblock 2004.
+\newblock Tese de Doutorado - UFMG, Belo Horizonte, 2004.
+
+\bibitem{Avizienis:1995}
+CHEN, L.; AVIZIENIS, A.
+\newblock N-version programminc: A fault-tolerance approach to rellablllty of
+  software operatlon.
+\newblock In: .
+\newblock c1995.
+\newblock p. 113--.
+
+\bibitem{Pradhan:1996}
+PRADHAN, D.~K. (Ed.).
+\newblock {\em Fault-tolerant computer system design}.
+\newblock Upper Saddle River, NJ, USA: Prentice-Hall, Inc., 1996.
+
+\bibitem{Somani:1997}
+SOMANI, A.~K.; VAIDYA, N.~H.
+\newblock Understanding fault tolerance and reliability.
+\newblock {\em Computer}, Los Alamitos, CA, USA, v. 30, n. 4, \newblock p.
+  45--50, apr 1997.
+
+\bibitem{Arlat:2003}
+ARLAT, J.; CROUZET, Y.; KARLSSON, J.; FOLKESSON, P.; FUCHS, E.; LEBER, G.
+\newblock Comparison of physical and software-implemented fault injection
+  techniques.
+\newblock {\em Computers, IEEE Transactions on}, v. 52, n. 9, \newblock p.
+  1115--1133, Sept 2003.
+
+\bibitem{Arlat:1990}
+ARLAT, J.; AGUERA, M.; AMAT, L.; CROUZET, Y.; FABRE, J.-C.; LAPRIE, J.-C.;
+  MARTINS, E.; POWELL, D.
+\newblock Fault injection for dependability validation: A methodology and some
+  applications.
+\newblock {\em IEEE Transactions on Software Engineering}, Los Alamitos, CA,
+  USA, v. 16, n. 2, \newblock p. 166--182, 1990.
+
+\bibitem{Gunnelo:1989}
+GUNNEFLO, U.; KARLSSON, J.; TORIN, J.
+\newblock Evaluation of error detection schemes using fault injection by
+  heavy-ion radiation.
+\newblock In: .
+\newblock c1989.
+\newblock p. 340--347.
+
+\bibitem{Sotoma:1997}
+SOTOMA, I.
+\newblock {\em Afids - arquitetura para injeção de falhas em sistemas
+  distribuídos}.
+\newblock 1997.
+\newblock Disserta\c{c}\~ao de Mestrado - UFRGS, Porto Alegre, 1997.
+
+\bibitem{Martins:1989}
+MARTINS, E.; ARLAT, J.; CROUZET, Y.; FABRE, J.; POWELL, D.
+\newblock Testing multipeer protocols in the presence of faults.
+\newblock {\em Protocol Test Systems}, p. 77--91, 1989.
+
+\bibitem{Dawson:1995}
+DAWSON, S.; JAHANIAN, F.; MITTON, T.
+\newblock A software fault injection tool on real-time mach.
+\newblock In: .
+\newblock c1995.
+\newblock p. 130--140.
+
+\bibitem{Rosenberg:1993}
+ROSENBERG, H.~A.; SHIN, K.~G.
+\newblock Software fault injection and its application in distributed systems.
+\newblock In: .
+\newblock c1993.
+\newblock p. 208--217.
+
+\bibitem{Segall:1988}
+SEGALL, Z.; VRSALOVIC, D.; SIEWIOREK, D.; YASKIN, D.; KOWNACKI, J.; BARTON, J.;
+  DANCEY, R.; ROBINSON, A.; LIN, T.
+\newblock Fiat-fault injection based automated testing environment.
+\newblock In: .
+\newblock c1988.
+\newblock p. 102--107.
+
+\bibitem{Engholm:2010}
+ENGHOLM~JR, H.
+\newblock {\em Engenharia de software na pr{\'a}tica}.
+\newblock Novatec Editora Ltda, 2010.
+
+\bibitem{Vinicius:2009}
+SENGER, VINICIUS, X.~K.
+\newblock 33 design-patterns aplicados com java.
+\newblock Publicação online, 2009.
+\newblock Disponível em:
+  $<$http://pt.slideshare.net/vsenger/33-design-patterns-com-java$>$ Acesso em:
+  14-Abril-2016.
+
+\bibitem{lpc1768:2016}
+MBED, A.
+\newblock mbed lpc1768, 2016.
+\newblock Disponível em:
+  $<$https://developer.mbed.org/platforms/mbed-LPC1768/$>$ Acesso em:
+  23/03/2016.
+
+\bibitem{manualLpc176x:2016}
+MBED, A.
+\newblock Lpc1768/66/65/64, 2009.
+\newblock Disponível em: $<$http://www.nxp.com/$>$ Acesso em: 23/03/2016.
+
+\bibitem{mbedCompiler:2016}
+MBED, A.
+\newblock Compilador, 2016.
+\newblock Disponível em: $<$https://developer.mbed.org/$>$ Acesso em:
+  23/03/2016.
+
+\bibitem{escritaNaFlash:2016}
+MBED, A.
+\newblock Iap internal flash write, 2010.
+\newblock Disponível em: $<$https://developer.mbed.org/users/okano/code/$>$
+  Acesso em: 23/03/2016.
+
+\bibitem{Meyers:2011}
+MEYERS, S.
+\newblock {\em C++ efcaz 55 maneiras de aprimorar seus programas e projetos}.
+\newblock Porto Alegre: BOOKMAN COMPANHIA EDITORA, 2011.
+
+\bibitem{orderUnicamp}
+HERNANDE, D.~N.
+\newblock Estrutura de dados, 2011.
+\newblock Disponível em: $<$http://www.ft.unicamp.br/liag/siteEd/$>$ Acesso
+  em: 03/08/2016.
+
+\bibitem{vivaLinux}
+STAVISK, S.
+\newblock Ordenar vetor com algoritmo inserton sort, 2010.
+\newblock Disponível em:
+  $<$https://www.vivaolinux.com.br/script/Ordenar-vetor-com-algoritmo-Insertion-Sort/$>$
+  Acesso em: 03/08/2016.
+
+\end{thebibliography}

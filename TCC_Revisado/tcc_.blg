@@ -1,0 +1,139 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: tcc_.aux
+A level-1 auxiliary file: cabecalho.aux
+A level-1 auxiliary file: resumo.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: agradecimentos.aux
+A level-1 auxiliary file: introducao.aux
+A level-1 auxiliary file: fundamentacao.aux
+A level-1 auxiliary file: metodologia.aux
+A level-1 auxiliary file: resultados.aux
+A level-1 auxiliary file: conclusao.aux
+The style file: abnt.bst
+A level-1 auxiliary file: apendice.aux
+Database file #1: bibliografia.bib
+Repeated entry---line 43 of file bibliografia.bib
+ : @book{Malvino:1985
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 60 of file bibliografia.bib
+ : @book{Malvino:1985
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 265 of file bibliografia.bib
+ : @article{Kanawati:1995
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 309 of file bibliografia.bib
+ : @article{Nelson:1990
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "Iaione:1999" isn't style-file defined
+--line 476 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 504 of file bibliografia.bib
+ :  
+ :  volume     = {43},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty pages in Kruger:2014
+Warning--there is no address in Malvino:1985
+Warning--empty address in Chetan:2005
+Warning--empty address in Johnson:1984
+Warning--there is no address in Reis:2004
+Warning--empty address in Ziegler:1996
+Warning--empty address in Kanawati:1995
+Warning--empty address in LaprieAcidente:1990
+Warning--empty address in Stassinopoulos:1988
+Warning--there is no address in Boudenot:2007
+Warning--empty year in Boudenot:2007
+Warning--empty conference in Mansoori:2013
+Warning--there is no cnumber in Mansoori:2013
+Warning--empty cyear in Mansoori:2013
+Warning--empty caddress in Mansoori:2013
+Warning--there is no ctitle in Mansoori:2013
+Warning--there is no editor in Mansoori:2013
+Warning--there is no address in Mansoori:2013
+Warning--there is no publisher in Mansoori:2013
+Warning--empty address and publisher in Mansoori:2013
+Warning--there is no address in ZieglerLandFord:1979
+Warning--empty conference in Woods:1978
+Warning--there is no cnumber in Woods:1978
+Warning--empty cyear in Woods:1978
+Warning--empty caddress in Woods:1978
+Warning--there is no ctitle in Woods:1978
+Warning--there is no editor in Woods:1978
+Warning--there is no address in Woods:1978
+Warning--there is no publisher in Woods:1978
+Warning--empty address and publisher in Woods:1978
+Warning--empty conference in Yu:2008
+Warning--there is no cnumber in Yu:2008
+Warning--empty cyear in Yu:2008
+Warning--empty caddress in Yu:2008
+Warning--there is no ctitle in Yu:2008
+Warning--there is no editor in Yu:2008
+Warning--there is no address in Yu:2008
+Warning--there is no publisher in Yu:2008
+Warning--empty address and publisher in Yu:2008
+Warning--empty conference in Ecoffet:1994
+Warning--there is no cnumber in Ecoffet:1994
+Warning--empty cyear in Ecoffet:1994
+Warning--empty caddress in Ecoffet:1994
+Warning--there is no ctitle in Ecoffet:1994
+Warning--there is no editor in Ecoffet:1994
+Warning--there is no address in Ecoffet:1994
+Warning--there is no publisher in Ecoffet:1994
+Warning--empty address and publisher in Ecoffet:1994
+Warning--empty address in Avizienis:1984
+Warning--empty address in VonNewmann:1956
+Warning--empty pages in Pego:2014
+Warning--empty conference in Avizienis:1995
+Warning--there is no cnumber in Avizienis:1995
+Warning--empty cyear in Avizienis:1995
+Warning--empty caddress in Avizienis:1995
+Warning--there is no ctitle in Avizienis:1995
+Warning--there is no editor in Avizienis:1995
+Warning--there is no address in Avizienis:1995
+Warning--there is no publisher in Avizienis:1995
+Warning--empty address and publisher in Avizienis:1995
+Warning--empty address in Arlat:2003
+Warning--empty conference in Gunnelo:1989
+Warning--there is no cnumber in Gunnelo:1989
+Warning--empty cyear in Gunnelo:1989
+Warning--empty caddress in Gunnelo:1989
+Warning--there is no ctitle in Gunnelo:1989
+Warning--there is no editor in Gunnelo:1989
+Warning--there is no address in Gunnelo:1989
+Warning--there is no publisher in Gunnelo:1989
+Warning--empty address and publisher in Gunnelo:1989
+Warning--empty pages in Sotoma:1997
+Warning--empty address in Martins:1989
+Warning--empty conference in Dawson:1995
+Warning--there is no cnumber in Dawson:1995
+Warning--empty cyear in Dawson:1995
+Warning--empty caddress in Dawson:1995
+Warning--there is no ctitle in Dawson:1995
+Warning--there is no editor in Dawson:1995
+Warning--there is no address in Dawson:1995
+Warning--there is no publisher in Dawson:1995
+Warning--empty address and publisher in Dawson:1995
+Warning--empty conference in Rosenberg:1993
+Warning--there is no cnumber in Rosenberg:1993
+Warning--empty cyear in Rosenberg:1993
+Warning--empty caddress in Rosenberg:1993
+Warning--there is no ctitle in Rosenberg:1993
+Warning--there is no editor in Rosenberg:1993
+Warning--there is no address in Rosenberg:1993
+Warning--there is no publisher in Rosenberg:1993
+Warning--empty address and publisher in Rosenberg:1993
+Warning--empty conference in Segall:1988
+Warning--there is no cnumber in Segall:1988
+Warning--empty cyear in Segall:1988
+Warning--empty caddress in Segall:1988
+Warning--there is no ctitle in Segall:1988
+Warning--there is no editor in Segall:1988
+Warning--there is no address in Segall:1988
+Warning--there is no publisher in Segall:1988
+Warning--empty address and publisher in Segall:1988
+Warning--there is no address in Engholm:2010
+Too many commas in name 1 of "Senger, Vinicius, Xavier, Kleber" for entry Vinicius:2009
+while executing---line 1951 of file abnt.bst
+(There were 6 error messages)
