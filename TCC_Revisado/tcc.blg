@@ -29,18 +29,20 @@ Repeated entry---line 309 of file bibliografia.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "Iaione:1999" isn't style-file defined
 --line 476 of file bibliografia.bib
-I was expecting a `,' or a `}'---line 504 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 512 of file bibliografia.bib
  :  
  :  volume     = {43},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Pressman:2005"
+Warning--I didn't find a database entry for "Taurion:2005"
+Warning--I didn't find a database entry for "Carvalho:2006"
 Warning--empty pages in Kruger:2014
 Warning--there is no address in Malvino:1985
 Warning--empty address in Chetan:2005
 Warning--empty address in Johnson:1984
 Warning--there is no address in Reis:2004
 Warning--empty address in Ziegler:1996
-Warning--empty address in Kanawati:1995
 Warning--empty address in LaprieAcidente:1990
 Warning--empty address in Stassinopoulos:1988
 Warning--there is no address in Boudenot:2007
@@ -94,6 +96,7 @@ Warning--there is no editor in Avizienis:1995
 Warning--there is no address in Avizienis:1995
 Warning--there is no publisher in Avizienis:1995
 Warning--empty address and publisher in Avizienis:1995
+Warning--empty address in Kanawati:1995
 Warning--empty address in Arlat:2003
 Warning--empty conference in Gunnelo:1989
 Warning--there is no cnumber in Gunnelo:1989
@@ -136,4 +139,5 @@ Warning--empty address and publisher in Segall:1988
 Warning--there is no address in Engholm:2010
 Too many commas in name 1 of "Senger, Vinicius, Xavier, Kleber" for entry Vinicius:2009
 while executing---line 1951 of file abnt.bst
+Warning--empty pages in Valderi:2008
 (There were 6 error messages)

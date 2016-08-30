@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Nelson:1990}
+NELSON, V.~P.
+\newblock Fault-tolerant computing: Fundamental concepts.
+\newblock {\em Computer}, Los Alamitos, CA, USA, v. 23, \newblock p. 19--25,
+  jul 1990.
+
 \bibitem{Cunha:2007}
 CUNHA, A.
 \newblock O que são sistemas embarcados, 2007.
@@ -29,16 +35,16 @@ CHETAN, S.; RANGANATHAN, A.; CAMPBELL, R.
 \newblock {\em Technology and Society Magazine, IEEE}, v. 24, n. 1, \newblock
   p. 38--44, Spring 2005.
 
-\bibitem{Nelson:1990}
-NELSON, V.~P.
-\newblock Fault-tolerant computing: Fundamental concepts.
-\newblock {\em Computer}, Los Alamitos, CA, USA, v. 23, \newblock p. 19--25,
-  jul 1990.
-
 \bibitem{Johnson:1984}
 JOHNSON, B.
 \newblock Fault-tolerant microprocessor-based systems.
 \newblock {\em Micro, IEEE}, v. 4, n. 6, \newblock p. 6--21, dec 1984.
+
+\bibitem{Thomas:1996}
+TADEU, T.~G.; GALVãO, L. E.~M.
+\newblock Um estudo exploratório sobre sistemas operacionais embarcados.
+\newblock Technical Report~1, Instituto de Ciência e Tecnologia da
+  Universidade Federal de São Paulo - UNIFESP, 2014.
 
 \bibitem{Reis:2004}
 REIS, E.
@@ -61,18 +67,6 @@ ZIEGLER, J.
 \newblock Terrestrial cosmic rays.
 \newblock {\em IBM Journal of Research and Development}, v. 40, n. 1, \newblock
   p. 19--39, Jan 1996.
-
-\bibitem{Thomas:1996}
-TADEU, T.~G.; GALVãO, L. E.~M.
-\newblock Um estudo exploratório sobre sistemas operacionais embarcados.
-\newblock Technical Report~1, Instituto de Ciência e Tecnologia da
-  Universidade Federal de São Paulo - UNIFESP, 2014.
-
-\bibitem{Kanawati:1995}
-KANAWATI, G.; KANAWATI, N.; ABRAHAM, J.
-\newblock Ferrari: a flexible software-based fault and error injection system.
-\newblock {\em Computers, IEEE Transactions on}, v. 44, n. 2, \newblock p.
-  248--260, Feb 1995.
 
 \bibitem{Weber:2002}
 WEBER, T.~S.
@@ -185,6 +179,12 @@ SOMANI, A.~K.; VAIDYA, N.~H.
 \newblock {\em Computer}, Los Alamitos, CA, USA, v. 30, n. 4, \newblock p.
   45--50, apr 1997.
 
+\bibitem{Kanawati:1995}
+KANAWATI, G.; KANAWATI, N.; ABRAHAM, J.
+\newblock Ferrari: a flexible software-based fault and error injection system.
+\newblock {\em Computers, IEEE Transactions on}, v. 44, n. 2, \newblock p.
+  248--260, Feb 1995.
+
 \bibitem{Arlat:2003}
 ARLAT, J.; CROUZET, Y.; KARLSSON, J.; FOLKESSON, P.; FUCHS, E.; LEBER, G.
 \newblock Comparison of physical and software-implemented fault injection
@@ -267,6 +267,13 @@ MBED, A.
 \newblock Lpc1768/66/65/64, 2009.
 \newblock Disponível em: $<$http://www.nxp.com/$>$ Acesso em: 23/03/2016.
 
+\bibitem{mbedWhatdog:2016}
+MBED, A.
+\newblock Compilador, 2016.
+\newblock Disponível em:
+  $<$https://developer.mbed.org/cookbook/WatchDog-Timer$>$ Acesso em:
+  29/08/2016.
+
 \bibitem{mbedCompiler:2016}
 MBED, A.
 \newblock Compilador, 2016.
@@ -283,6 +290,13 @@ MBED, A.
 MEYERS, S.
 \newblock {\em C++ efcaz 55 maneiras de aprimorar seus programas e projetos}.
 \newblock Porto Alegre: BOOKMAN COMPANHIA EDITORA, 2011.
+
+\bibitem{Valderi:2008}
+LEITHARDT, V. R.~Q.
+\newblock {\em Modelo gerenciador de descoberta de serviços pervasivos ciente
+  de contexto}.
+\newblock 2008.
+\newblock Disserta\c{c}\~ao de Mestrado - PUCRS, Porto Alegre, 2008.
 
 \bibitem{orderUnicamp}
 HERNANDE, D.~N.
