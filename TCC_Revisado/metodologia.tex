@@ -23,9 +23,9 @@ Foram utilizados exemplos variados para exemplificar as modificações realizada
 
 Para a ampliação das biblioteca citadas, utilizou-se um microcontrolador de prototipagem rápida \textit{mbed}, modelo NXP LPC1768 \cite{lpc1768:2016} (o mesmo utilizado por Kruger). Este é projetado para a prototipagem de diversos equipamentos, especialmente aqueles que necessitam de conexão com a internet, portas USB e interfaces variadas para periféricos. Ele possui um núcleo ARM Cortex-M3 32 bits com 96 MHz de \textit{clock}, 64 KB de memória RAM (32 KB disponíveis ao usuário e 32 KB reservados aos controladores internos do dispositivo), uma memória \textit{flash} de 512 KB, portas \textit{built-in Ethernet}, USB Host, CAN (\textit{Controller Area Network}), SPI (\textit{Serial Peripheral Interface}), I2C (\textit{Inter-Integrated Circuit}), ADC (\textit{Analog-to-Digital Converter}), DAC (\textit{Digital-to-Analog Converter}), PWM (\textit{Pulse-Width Modulation}) e outras interfaces de entrada e saída.
 
-O \textit{mbed} também possui um temporizador \textit{watchdog} \cite{manualLpc176x:2016}, que é um hardware que reinicia o dispositivo automaticamente em caso de falhas de \textit{hardware} ou de \textit{software}. O temporizador é carregado com um valor inicial, que é decrementado a cada vez que o \textit{watchdog} é executado, sendo que o programa principal executa um \textit{loop} que atravessa a execução de várias funções, que repõe o temporizador a cada vez que passa pelo circuito principal, se por conta de uma falha a reposição não ocorrer e o temporizador zerar, o dispositivo será reiniciado \cite{mbedWhatdog:2016}.
+O \textit{mbed} também possui um temporizador \textit{watchdog}, que é um hardware que reinicia o dispositivo automaticamente em caso de falhas de \textit{hardware} ou de \textit{software}. O temporizador é carregado com um valor inicial, que é decrementado a cada vez que o \textit{watchdog} é executado, sendo que o programa principal executa um \textit{loop} que atravessa a execução de várias funções, que repõe o temporizador a cada vez que passa pelo circuito principal, se por conta de uma falha a reposição não ocorrer e o temporizador zerar, o dispositivo será reiniciado \cite{mbedWhatdog:2016}.
 
-No sítio oficial da plataforma \textit{mbed} são fornecidas soluções para auxiliar o desenvolvimento. Além da possibilidade de baixar bibliotecas fornecidas pela comunidade, o sítio disponibiliza um \textit{forum} para retirada de dúvidas. A \textit{mbed} também fornece um compilador online, no qual após a compilação do código, um arquivo binário é gerado para ser executado no microcontrolador. Este compilador online tem a capacidade de compilar códigos para diversos modelos do \textit{mbed} \cite{mbedCompiler:2016}.
+No sítio oficial da plataforma \textit{mbed} são fornecidas soluções para auxiliar no desenvolvimento de sistemas embarcados. Além da possibilidade de baixar bibliotecas fornecidas pela comunidade, o sítio disponibiliza um \textit{forum} para retirada de dúvidas. A \textit{mbed} também fornece um compilador online, no qual após a compilação do código, um arquivo binário é gerado para ser executado no microcontrolador. Este compilador online tem a capacidade de compilar códigos para diversos modelos do \textit{mbed} \cite{mbedCompiler:2016}.
 
 Além do modelo LPC1768, existem outros pertencentes à família \textit{mbed} NXP LPC17X, são eles: LPC1764, LPC1765, LPC1766 \cite{manualLpc176x:2016}. Embora apresentem arquiteturas compatíveis, o tamanho e o mapa de memória \textit{flash} e \textit{SRAM} varia conforme cada um, distinguindo-se por exemplo, nos modelos LPC1768/66/65 que possuem endereços de regiões de memória \textit{SRAM} idênticos, mas diferentes ao modelo LPC1764, conforme mostra-se na Figura \ref{Img:memoryMap}.
 
@@ -58,7 +58,7 @@ A classe abstrata \textit{MemoryMap} representa o mapa de memória de um microco
 	\item \textbf{\textit{getPeripheralsMemoryRegions()}} - retorna uma lista de regiões da memória destinadas aos periféricos. Este método não é abstrato, mas pode ser sobrescrito. Entretanto, como as regiões dos periféricos do microcontrolador é comum a todos eles, não há necessidade alguma sobrescrever este método.
 \end{itemize}
 
-Por \textit{FaultInjector} ser capaz de identificar o modelo do processador, ela mesmo é responsável por escolher qual das versões de \textit{MemoryMap} irá utilizar (\textit{MemoryMap\_LPC1764}, \textit{MemoryMap\_LPC1765}, entre outros). Isso tornou a biblioteca flexível, sendo possível injetar falhas nos nas regiões de memória mostradas na Figura \ref{Img:memoryMap}.
+Por \textit{FaultInjector} ser capaz de identificar o modelo do processador, ela mesmo é responsável por escolher qual das versões de \textit{MemoryMap} irá utilizar (\textit{MemoryMap\_LPC1764}, \textit{MemoryMap\_LPC1765}, entre outros). Isso tornou a biblioteca flexível, sendo possível injetar falhas nos nas regiões de memória mostradas na Figura \ref{Img:memoryMap}. A biblioteca está disponível no endereço \url{https://github.com/cleitonalmeida1/FaultInjector}.
 
 \begin{figure}[H]
 	\centering
@@ -145,7 +145,7 @@ O uso do padrão de projeto mencionado e a aplicação dos conceitos de orienta�
 	%width=0.5\textwidth (Tamanho da Imagem)
 \end{figure}
 \newpage
-\begin{lstlisting}[label=Func:faultRecovery,caption={[Exemplo de criação de um estado]A classe EsperandoCarroChegar herda da classe \textit{State} e tem sua rotina implementada no método \textit{run}, ao encerrar a rotina o método \textit{setToState} é invocado, alterando o estado atual. No método \textit{main} um objeto \textit{StateMachine} é instanciado e o método \textit{start} é chamado, iniciando a máquina de estados. Este quadro tem como objetivo demonstrar a utilização da biblioteca, apenas um estado será posto no quadro, os demais serão anexados ao trabalho.}]
+\begin{lstlisting}[label=Func:faultRecovery,caption={[Exemplo de criação de um estado]A classe EsperandoCarroChegar herda da classe \textit{State} e tem sua rotina implementada no método \textit{run}, ao encerrar a rotina o método \textit{setToState} é invocado, alterando o estado atual. No método \textit{main} um objeto \textit{StateMachine} é instanciado e o método \textit{start} é chamado, iniciando a máquina de estados. Este quadro tem como objetivo demonstrar a utilização da biblioteca, apenas um estado será posto no quadro, os demais podem ser acessados no endereço \url{https://github.com/cleitonalmeida1}.}]
 	class EsperandoCarroChegar: public State {
 		void run(StateMachine &sm) {
 			if (carroChegou()) {
@@ -205,7 +205,7 @@ O terceiro é o método \textit{start} no qual é realizada a inicialização da
 		sm.start<EsperandoCarroEntrar>();
 	}
 \end{lstlisting}
-
+\newpage
 \section{\textit{Classe de Redundância de Dados: TData}} \label{sec:classeTData}
 A classe \textit{TData} foi implementada com o objetivo de obter-se uma redundância de dados automatizada, tanto para variáreis primitivas (int, float, long, double, char, bool), quanto para objetos de uma classe. Existem duas maneiras de se criar um objeto \textit{TData}, a primeira é utilizando tipos primitivos e a segunda objetos. 
 
@@ -262,7 +262,7 @@ Este parágrafo tem por objetivo demonstrar que a classe \textit{TData} também 
 	%width=0.5\textwidth (Tamanho da Imagem)
 \end{figure}
 
-Além das três cópias de segurança que compõem a classe \textit{TData} existe mais uma cópia chamada \textit{dataObject}, que é utilizada para atualizar o objeto \textit{TData} sem a necessidade de modificar o objeto carro e passá-lo como parâmetro para o método \textit{setData}, ou seja, a variável \textit{dataObjet} é utilizada para replicar uma alteração no objeto para as demais cópias. Para acessar o objeto \textit{dataObject}  é necessário chamar o método \textit{getDataObject} implementado para atualizar as três cópias e executar o método \textit{getByVotting} para manter a consistência de todas as cópias. Na Figura \ref{Img:tdataSetando} é mostrada a atualização do telefone do hospital e os valores das cópias após a injeção de falhas.
+Além das três cópias de segurança que compõem a classe \textit{TData} existe mais uma cópia chamada \textit{dataObject}, que é utilizada para atualizar o objeto \textit{TData} sem a necessidade de passar o objeto modificado como parâmetro no construtor da classe. A variável \textit{dataObjet} é utilizada para replicar uma alteração no objeto para as demais cópias. Para acessar o objeto \textit{dataObject}  é necessário chamar o método \textit{getDataObject} implementado para atualizar as três cópias e executar o método \textit{getByVotting} para manter a consistência de todas as cópias. Na Figura \ref{Img:tdataSetando} é mostrada a atualização do telefone do hospital e os valores das cópias após a injeção de falhas.
 
 \begin{figure}[H]
 	\centering

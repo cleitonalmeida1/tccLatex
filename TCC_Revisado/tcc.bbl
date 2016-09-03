@@ -68,6 +68,13 @@ ZIEGLER, J.
 \newblock {\em IBM Journal of Research and Development}, v. 40, n. 1, \newblock
   p. 19--39, Jan 1996.
 
+\bibitem{Carvalho:2006}
+CARVALHO, A.
+\newblock Grandes desafios da pesquisa em computação no brasil de 2006 -
+  2016.
+\newblock Technical report, SBC - Sociedade Brasileira de Computação, Porto
+  Alegre: SBC, 2006.
+
 \bibitem{Weber:2002}
 WEBER, T.~S.
 \newblock Um roteiro para exploração dos conceitos básicos de tolerância a
@@ -135,6 +142,12 @@ YU, H.; FAN, X.; NICOLAIDIS, M.
 \newblock c2008.
 \newblock p. 651--654.
 
+\bibitem{Normand:1996}
+NORMAND, E.
+\newblock Single-event effects in avionics.
+\newblock {\em IEEE Transactions on Nuclear Science}, v. 43, n. 2, \newblock p.
+  461--474, Apr 1996.
+
 \bibitem{Ecoffet:1994}
 ECOFFET, R.; DUZELLIER, S.; TASTET, P.; AICARDI, C.; LABRUNEE, M.
 \newblock Observation of heavy ion induced transients in linear circuits.
@@ -159,6 +172,12 @@ PEGO, M.~O.
   multiprocessado}.
 \newblock 2004.
 \newblock Tese de Doutorado - UFMG, Belo Horizonte, 2004.
+
+\bibitem{Brilliant:1990}
+BRILLIANT, S.~S.; KNIGHT, J.~C.; LEVESON, N.~G.
+\newblock Analysis of faults in an n-version software experiment.
+\newblock {\em IEEE Trans. Softw. Eng.}, Piscataway, NJ, USA, v. 16, n. 2,
+  \newblock p. 238--247, feb 1990.
 
 \bibitem{Avizienis:1995}
 CHEN, L.; AVIZIENIS, A.

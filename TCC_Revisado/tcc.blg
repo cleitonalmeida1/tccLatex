@@ -2,6 +2,14 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: tcc.aux
 A level-1 auxiliary file: cabecalho.aux
 A level-1 auxiliary file: resumo.aux
 A level-1 auxiliary file: abstract.aux
+White space in argument---line 3 of file abstract.aux
+ : \citation{Nelson
+ :                  1990}
+I'm skipping whatever remains of this command
+White space in argument---line 4 of file abstract.aux
+ : \citation{Nelson
+ :                  1990}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: agradecimentos.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: fundamentacao.aux
@@ -19,24 +27,23 @@ Repeated entry---line 60 of file bibliografia.bib
  : @book{Malvino:1985
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 265 of file bibliografia.bib
+Repeated entry---line 294 of file bibliografia.bib
  : @article{Kanawati:1995
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 309 of file bibliografia.bib
+Repeated entry---line 338 of file bibliografia.bib
  : @article{Nelson:1990
  :                     ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "Iaione:1999" isn't style-file defined
---line 476 of file bibliografia.bib
-I was expecting a `,' or a `}'---line 512 of file bibliografia.bib
+--line 505 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 541 of file bibliografia.bib
  :  
  :  volume     = {43},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Pressman:2005"
 Warning--I didn't find a database entry for "Taurion:2005"
-Warning--I didn't find a database entry for "Carvalho:2006"
 Warning--empty pages in Kruger:2014
 Warning--there is no address in Malvino:1985
 Warning--empty address in Chetan:2005
@@ -75,6 +82,7 @@ Warning--there is no editor in Yu:2008
 Warning--there is no address in Yu:2008
 Warning--there is no publisher in Yu:2008
 Warning--empty address and publisher in Yu:2008
+Warning--empty address in Normand:1996
 Warning--empty conference in Ecoffet:1994
 Warning--there is no cnumber in Ecoffet:1994
 Warning--empty cyear in Ecoffet:1994
@@ -140,4 +148,4 @@ Warning--there is no address in Engholm:2010
 Too many commas in name 1 of "Senger, Vinicius, Xavier, Kleber" for entry Vinicius:2009
 while executing---line 1951 of file abnt.bst
 Warning--empty pages in Valderi:2008
-(There were 6 error messages)
+(There were 8 error messages)
