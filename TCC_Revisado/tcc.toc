@@ -33,22 +33,22 @@
 \contentsline {subsection}{\numberline {3.1.1}Mapeamento de Mem\IeC {\'o}ria}{28}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Inje\IeC {\c c}\IeC {\~a}o de Falhas na Mem\IeC {\'o}ria Flash}{30}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}FaultRecovery: Extens\IeC {\~a}o da biblioteca}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Refatora\IeC {\c c}\IeC {\~a}o e Aperfei\IeC {\c c}oamento: Vers\IeC {\~a}o 1.0}{31}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Refatora\IeC {\c c}\IeC {\~a}o e Aperfei\IeC {\c c}oamento: Vers\IeC {\~a}o 2.0}{35}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}\textit {Classe de Redund\IeC {\^a}ncia de Dados: TData}}{37}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Classe TData com Tipos Primitivos}{37}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Um Exemplo Ilus\IeC {\'o}rio Para Utiliza\IeC {\c c}\IeC {\~a}o da Classe TData com Objetos}{37}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Classe Carro com Objeto de Pilha}{38}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Classe Carro com Ponteiro}{39}{subsection.3.3.4}
-\contentsline {chapter}{\numberline {4}Resultados}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Desempenho da Biblioteca \textit {FaultRecovery}}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Desempenho e Efici\IeC {\^e}ncia da Classe TData}{44}{section.4.2}
-\contentsline {section}{\numberline {4.3}Recupera\IeC {\c c}\IeC {\~a}o de falhas da biblioteca \textit {FaultRecovery}}{45}{section.4.3}
-\contentsline {section}{\numberline {4.4}Inje\IeC {\c c}\IeC {\~a}o de Falhas com a Biblioteca \textit {FaultInjector}}{46}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Contribui\IeC {\c c}\IeC {\~o}es deste Trabalho}{50}{section.5.1}
-\contentsline {section}{\numberline {5.2}Dificuldades Encontradas}{50}{section.5.2}
-\contentsline {section}{\numberline {5.3}Trabalhos Futuros}{50}{section.5.3}
-\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{52}{section*.30}
-\contentsline {chapter}{Ap\^endices}{55}{chapter*.31}
-\contentsline {chapter}{\numberline {A}Anexos}{56}{appendix.A}
+\contentsline {subsection}{\numberline {3.2.1}Refatora\IeC {\c c}\IeC {\~a}o e Aperfei\IeC {\c c}oamento: Vers\IeC {\~a}o 1.0}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Refatora\IeC {\c c}\IeC {\~a}o e Aperfei\IeC {\c c}oamento: Vers\IeC {\~a}o 2.0}{36}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}\textit {Classe de Redund\IeC {\^a}ncia de Dados: TData}}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Classe TData com Tipos Primitivos}{38}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Um Exemplo Ilus\IeC {\'o}rio Para Utiliza\IeC {\c c}\IeC {\~a}o da Classe TData com Objetos}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Classe Carro com Objeto de Pilha}{39}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Classe Carro com Ponteiro}{40}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}Resultados}{42}{chapter.4}
+\contentsline {section}{\numberline {4.1}Desempenho da Biblioteca \textit {FaultRecovery}}{42}{section.4.1}
+\contentsline {section}{\numberline {4.2}Desempenho e Efici\IeC {\^e}ncia da Classe TData}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Recupera\IeC {\c c}\IeC {\~a}o de falhas da biblioteca \textit {FaultRecovery}}{46}{section.4.3}
+\contentsline {section}{\numberline {4.4}Inje\IeC {\c c}\IeC {\~a}o de Falhas com a Biblioteca \textit {FaultInjector}}{48}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{50}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contribui\IeC {\c c}\IeC {\~o}es deste Trabalho}{51}{section.5.1}
+\contentsline {section}{\numberline {5.2}Dificuldades Encontradas}{51}{section.5.2}
+\contentsline {section}{\numberline {5.3}Trabalhos Futuros}{51}{section.5.3}
+\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{53}{section*.30}
+\contentsline {chapter}{Ap\^endices}{56}{chapter*.31}
+\contentsline {chapter}{\numberline {A}Anexos}{57}{appendix.A}

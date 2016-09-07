@@ -6,9 +6,12 @@ NELSON, V.~P.
 \newblock {\em Computer}, Los Alamitos, CA, USA, v. 23, \newblock p. 19--25,
   jul 1990.
 
-\bibitem{Cunha:2007}
-CUNHA, A.
-\newblock O que são sistemas embarcados, 2007.
+\bibitem{SistemasEmb:2014}
+PEREIRA, L.~A.; CARVALHO, F.~R.; BORTOLUCCI, T.; MORAES, M.~H.
+\newblock Software embarcado, o crescimento e as novas tendências deste
+  mercado.
+\newblock {\em Centro Universitário Anhanguera}, v. 6, \newblock p. 85--94,
+  2014.
 
 \bibitem{Kruger:2014}
 KRUGER, K.
@@ -67,6 +70,16 @@ ZIEGLER, J.
 \newblock Terrestrial cosmic rays.
 \newblock {\em IBM Journal of Research and Development}, v. 40, n. 1, \newblock
   p. 19--39, Jan 1996.
+
+\bibitem{Pressman:2005}
+PRESSMAN, R.
+\newblock {\em Software engineering: A practitioner's approach}.
+\newblock 6. ed. New York, NY, USA: McGraw-Hill, Inc., 2005.
+
+\bibitem{Taurion:2005}
+TAURION, C.
+\newblock {\em Software embarcado: oportunidades e potencial de mercado}.
+\newblock Rio de Janeiro: Brasport, 2005.
 
 \bibitem{Carvalho:2006}
 CARVALHO, A.
@@ -261,11 +274,6 @@ SEGALL, Z.; VRSALOVIC, D.; SIEWIOREK, D.; YASKIN, D.; KOWNACKI, J.; BARTON, J.;
 \newblock c1988.
 \newblock p. 102--107.
 
-\bibitem{Engholm:2010}
-ENGHOLM~JR, H.
-\newblock {\em Engenharia de software na pr{\'a}tica}.
-\newblock Novatec Editora Ltda, 2010.
-
 \bibitem{Vinicius:2009}
 SENGER, VINICIUS, X.~K.
 \newblock 33 design-patterns aplicados com java.
@@ -274,17 +282,17 @@ SENGER, VINICIUS, X.~K.
   $<$http://pt.slideshare.net/vsenger/33-design-patterns-com-java$>$ Acesso em:
   14-Abril-2016.
 
+\bibitem{Engholm:2010}
+ENGHOLM~JR, H.
+\newblock {\em Engenharia de software na pr{\'a}tica}.
+\newblock Novatec Editora Ltda, 2010.
+
 \bibitem{lpc1768:2016}
 MBED, A.
 \newblock mbed lpc1768, 2016.
 \newblock Disponível em:
   $<$https://developer.mbed.org/platforms/mbed-LPC1768/$>$ Acesso em:
   23/03/2016.
-
-\bibitem{manualLpc176x:2016}
-MBED, A.
-\newblock Lpc1768/66/65/64, 2009.
-\newblock Disponível em: $<$http://www.nxp.com/$>$ Acesso em: 23/03/2016.
 
 \bibitem{mbedWhatdog:2016}
 MBED, A.
@@ -298,6 +306,11 @@ MBED, A.
 \newblock Compilador, 2016.
 \newblock Disponível em: $<$https://developer.mbed.org/$>$ Acesso em:
   23/03/2016.
+
+\bibitem{manualLpc176x:2016}
+MBED, A.
+\newblock Lpc1768/66/65/64, 2009.
+\newblock Disponível em: $<$http://www.nxp.com/$>$ Acesso em: 23/03/2016.
 
 \bibitem{escritaNaFlash:2016}
 MBED, A.

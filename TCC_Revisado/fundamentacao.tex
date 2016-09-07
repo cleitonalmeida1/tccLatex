@@ -12,7 +12,7 @@
 %====================================================================================================
 \chapter{Fundamentação Teórica}\label{cap:funTeorica}
 
-Neste capítulo são apresentado os conceitos utilizados neste trabalho de acordo com a literatura estudada. Na seção \ref{sec:falhaErroDefeito} explica-se os conceitos de falha, erro e defeito ou modelo de três universos. Na seção \ref{sec:radiacao} são descritas as principais fontes de radiação e seus efeitos nos circuitos eletrônicos. Na seção \ref{sec:denpendabilidade} explica-se o conceito de dependabilidade. Na seção \ref{sec:tolerancia} explica-se o conceito de tolerância a falhas e os atributos necessários para que uma falha seja considerada como tal. Na seção \ref{sec:tecnica} são apresentas as principais técnicas de tolerância a falhas e na seção \ref{sec:InjecaoDeFalhas} as principais técnicas de injeção de falhas.
+Neste Capítulo são apresentados os conceitos utilizados neste trabalho de acordo com a literatura estudada. Na seção \ref{sec:falhaErroDefeito} explica-se os conceitos de falha, erro e defeito ou modelo de três universos. Na Seção \ref{sec:radiacao} são descritas as principais fontes de radiação e seus efeitos nos circuitos eletrônicos. Na Seção \ref{sec:denpendabilidade} explica-se o conceito de "dependabilidade". Na Seção \ref{sec:tolerancia} explica-se o conceito de tolerância a falhas e os atributos necessários para que uma falha seja considerada como tal. Na Seção \ref{sec:tecnica} são apresentas as principais técnicas de tolerância a falhas e na Seção \ref{sec:InjecaoDeFalhas} as principais técnicas de injeção de falhas.
 
 \section{Falha, Erro e Defeito} \label{sec:falhaErroDefeito}
 
@@ -70,25 +70,25 @@ As Partículas produzidas na atmosfera da Terra surgem quando os raios cósmicos
 
 \subsection{Partículas alpha}
 
-São compostas por dois nêutrons e dois prótons provenientes de um átomo de hélio duplamente ionizado a partir do decaimento nuclear de isótopos instáveis. No final da década de 70, as partículas alfa emitidas de materiais com traços de Urânio (U) e Tório (Th) foram mostradas como a causa dominante de um SEU numa memória RAM na superfície terrestre \cite{Woods:1978}. Estas partículas estão presentes nos materiais utilizados para o encapsulamento de circuitos integrados, no qual é necessária uma baixa concentração de Urânio (U) e tório (Th) para reduzir a emissão e o equilíbrio de partículas alfa, mas não sendo o suficiente para eliminá-las. Em situações de não equilíbrio, foi destacado que o material utilizado no processo de solda dos dispositivos, usualmente feitos de cumbo (Pb) e estanho (Sn), os quais são extraídos de minérios que podem conter traços de Urânio (U) e Tório (Th) que causam a incidência de partículas alfa. Por isso é aconselhável que projetistas não posicionem pontos de solda próximos aos nós dos circuitos \cite{Velazco:2007}.
+São compostas por dois nêutrons e dois prótons provenientes de um átomo de hélio duplamente ionizado a partir do decaimento nuclear de isótopos instáveis. No final da década de 70, as partículas alfa emitidas de materiais com traços de Urânio (U) e Tório (Th) foram mostradas como a causa dominante de um SEU numa memória \textit{RAM} na superfície terrestre \cite{Woods:1978}. Estas partículas estão presentes nos materiais utilizados para o encapsulamento de circuitos integrados, no qual é necessária uma baixa concentração de Urânio (U) e tório (Th) para reduzir a emissão e o equilíbrio de partículas alfa, mas não sendo o suficiente para eliminá-las. Em situações de não equilíbrio, foi destacado que o material utilizado no processo de solda dos dispositivos, usualmente feitos de cumbo (Pb) e estanho (Sn), os quais são extraídos de minérios que podem conter traços de Urânio (U) e Tório (Th) que causam a incidência de partículas alfa. Por isso é aconselhável que projetistas não posicionem pontos de solda próximos aos nós dos circuitos \cite{Velazco:2007}.
 
 
 \subsection{Efeitos Singulares ou \textit{Single Event Effects}(SEE)} \label{subsec:EfeitosSingulares}
 
-Efeitos singulares são causados por uma única partícula e podem assumir muitas formas. Estão associados com a mudança de estados ou erros transientes num dispositivo causado pela indução de partículas energéticas ou radiação cósmica \cite{Yu:2008}. O impacto de uma única partícula ionizada da origem a pares de elétrons ao longo da trajetória da partícula por meio de um material semicondutor, SEE podem ser classificados em vários tipos, neste trabalho será citado apenas SEU e SET.
+Efeitos singulares são causados por uma única partícula e podem assumir muitas formas. Estão associados a erros transientes num dispositivo causado pela indução de partículas energéticas ou radiação cósmica \cite{Yu:2008}. O impacto de uma única partícula ionizada da origem a pares de elétrons ao longo da trajetória da partícula por meio de um material semicondutor, SEE podem ser classificados em vários tipos como por exemplo:
 
-\textit{Single Event Upsets}(SEU): Um SEU ocorre quando a incidência de uma partícula num dispositivo digital provoca mudanças indesejáveis no seu estado lógico, como por exemplo, a inversão de bits de elementos de memória. Esta inversão resulta de quando um pulso transitório incide num espaço de memória, esse efeito é visto como uma inversão do valor de armazenamento no \textit{flip-flop}, ou seja, um \textit{bit-flip} \cite{Normand:1996}.
-
-\textit{Single Event Transients}(SET): São variações temporárias na tensão de saída de corrente ou de um circuito
-devido à passagem de um íon pesado através de um dispositivo sensível, ou seja, pulso transiente que pode ou não ser capturado por um elemento de memória \cite{Ecoffet:1994}.
-
-
+\begin{itemize}
+	\item \textit{Single Event Upsets}(SEU): Um SEU ocorre quando a incidência de uma partícula num dispositivo digital provoca mudanças indesejáveis no seu estado lógico, como por exemplo, a inversão de bits de elementos de memória. Esta inversão resulta de quando um pulso transitório incide num espaço de memória, esse efeito é visto como uma inversão do valor de armazenamento no \textit{flip-flop}, ou seja, um \textit{bit-flip} \cite{Normand:1996}.
+	
+	\item \textit{Single Event Transients}(SET): São variações temporárias na tensão de saída de corrente ou de um circuito
+	devido à passagem de um íon pesado através de um dispositivo sensível, ou seja, pulso transiente que pode ou não ser capturado por um elemento de memória \cite{Ecoffet:1994}.
+\end{itemize}
 
 \section{Dependabilidade} \label{sec:denpendabilidade}
 
-Segundo Laprie, dependabilidade indica a qualidade do serviço fornecido por um dado sistema e a confiança depositada no serviço fornecido \cite{LaprieAcidente:1990}. Do ponto de vista etimológico ao que diz respeito ao termo dependabilidade, do inglês \textit{dependability}, o termo confiabilidade, do inglês \textit{reability} seria mais apropriado: a capacidade de confiar. Apesar de que \textit{dependability} é sinônimo de \textit{reability}. 
+Segundo Laprie \cite{LaprieAcidente:1990}, dependabilidade indica a qualidade do serviço fornecido por um dado sistema e a confiança depositada no serviço fornecido. Do ponto de vista etimológico ao que diz respeito ao termo dependabilidade, do inglês \textit{dependability}, o termo confiabilidade, do inglês \textit{reability} seria mais apropriado: a capacidade de confiar. Apesar de que \textit{dependability} é sinônimo de \textit{reability} \cite{LaprieAcidente:1990}. 
 
-Segundo Laprie e Weber \cite{Weber:2002, LaprieAcidente:1990} Tolerância a falhas e dependabilidade não são propriedades de um sistema a que se possa atribuir diretamente valores numéricos. Mas todos os atributos da dependabilidade correspondem a medidas numéricas. Seus principais atributos são dependabilidade, confiabilidade, disponibilidade, segurança de funcionamento (\textit{safety}) e segurança (\textit{security}). Um resumo dos principais
+Segundo Laprie e Weber \cite{LaprieAcidente:1990, Weber:2002} tolerância a falhas e dependabilidade não são propriedades de um sistema a que se possa atribuir diretamente valores numéricos. Mas todos os atributos da dependabilidade correspondem a medidas numéricas. Seus principais atributos são dependabilidade, confiabilidade, disponibilidade, segurança de funcionamento (\textit{safety}) e segurança (\textit{security}). Um resumo dos principais
 atributos é mostrado na Tabela \ref{Img:atDenp}.     
 
 
@@ -123,11 +123,11 @@ Pêgo \cite{Pego:2014} descreve os conjuntos de atributos utilizados para caract
 	
 	\item \textbf{Natureza} - Uma falha pode ser proveniente de \textit{software} ou \textit{hardware}. Neste último, a falha pode estar na parte analógica, por exemplo, em transdutores e amplificadores, ou na parte digital, por exemplo, na unidade lógica Aritmética (ULA).
 	
-	\item \textbf{Duração} - Uma falha pode ser constante, o que significa que uma vez que os dados tenham sido persistidos no sistema, a falha continuará até que a manutenção adequada seja feita. Pode ainda ser transitória, quando ocorre em um período de tempo e em logo em seguida, desaparece. Esse tipo de falha é geralmente provocada por causas externas. Relâmpago, por exemplo, podem provocar um erro súbito em um dispositivo, mas após o relâmpago, o dispositivo voltará ao seu funcionamento normal. Finalmente, há falhas, que são chamadas intermitentes; essas ocorrem em períodos curtos de tempo e desaparecem, mas depois elas voltam novamente. É possível que este processo se repita indefinidamente. Uma falha intermitente é a ocorrência de repetição de falhas transitórias.
+	\item \textbf{Duração} - Uma falha pode ser constante, o que significa que uma vez que os dados tenham sido persistidos no sistema, a falha continuará até que a manutenção adequada seja feita. Pode ainda ser transitória, quando ocorre em um período de tempo e logo em seguida, desaparece. Esse tipo de falha é geralmente provocada por causas externas. Relâmpago, por exemplo, podem provocar um erro súbito em um dispositivo, mas após o relâmpago, o dispositivo voltará ao seu funcionamento normal. Finalmente, há falhas, que são chamadas intermitentes; essas ocorrem em períodos curtos de tempo e desaparecem, mas depois elas voltam novamente. É possível que este processo se repita indefinidamente. Uma falha intermitente é a ocorrência de repetição de falhas transitórias.
 	
 	\item \textbf{Extensão} - A ocorrência de uma falha pode estar limitada a um escopo global ou local. Ou seja, uma falha pode afetar todo o sistema ou ser limitada a um determinado bloco. 
 	
-	\item \textbf{Valor} - O valor de uma falha pode ser determinado ou indeterminado. Ou seja, os valores relativos de uma falha podem ser constantes ou não. Na seção \ref{sec:falhaErroDefeito} é citado um exemplo de uma falha que mantém um endereço de memória com um valor fixo em zero, este exemplo é chamado de uma avaria determinada. Outra falha sem esta característica é chamada de indeterminada.
+	\item \textbf{Valor} - O valor de uma falha pode ser determinado ou indeterminado. Ou seja, os valores relativos de uma falha podem ser constantes ou não. Na Seção \ref{sec:falhaErroDefeito} é citado um exemplo de uma falha que mantém um endereço de memória com um valor fixo em zero, este exemplo é chamado de valor determinado. Outra falha sem esta característica é chamada de indeterminada.
 	
 	
 	
@@ -136,7 +136,7 @@ Pêgo \cite{Pego:2014} descreve os conjuntos de atributos utilizados para caract
 
 \section{Técnicas de Tolerância a Falhas}\label{sec:tecnica}
 
-Para mitigar(abrandar, minimizar) os efeitos citados na subseção \ref{subsec:EfeitosSingulares} e na seção \ref{sec:falhaErroDefeito} são utilizadas técnicas de tolerância a falhas, na qual envolvem alguma forma de redundância.  
+Para mitigar(abrandar, minimizar) os efeitos citados na Subseção \ref{subsec:EfeitosSingulares} e na Seção \ref{sec:falhaErroDefeito} são utilizadas técnicas de tolerância a falhas, nas quais envolvem alguma forma de redundância.  
 Existem técnicas baseadas em \textit{software} e \textit{hardware}, neste trabalho foram citados apenas as técnicas baseadas em \textit{software}, pois no desenvolvimento da aplicação proposta não foram utilizadas as técnicas baseadas em \textit{hardware}, pois esta técnica demanda da utilização de um equipamento que realiza o bombardeamento de íons sobre o circuito eletrônico podendo danificar o \textit{hardware} \cite{Weber:2002}.
 
 \subsection{Técnicas de redundância baseadas em software}
@@ -147,7 +147,7 @@ Segundo Pêgo \cite{Pego:2014} a inserção de redundância no código ou nos da
 \begin{itemize}
 	\item \textbf{Técnicas orientadas a dados} - Cada dado armazenado é replicado em cada operação, na checagem da consistência dos dados sendo necessária a alteração do código fonte. Pode ser implementado em linguagens de baixo nível como C, que será utilizada neste trabalho, \textit{assembly} e até no código intermediário gerado pelo compilador \cite{Pego:2014}.
 	
-	\item \textbf{Técnicas orientadas ao controle} - As falhas que podem modificar o fluxo correto de execução dos programas são detectadas e tratadas. Todas as técnicas no nível de instrução são baseadas na divisão do código do programa em \textit{basic blocks}, construção de grafos e a checagem em tempo de execução sobre a correta transição entre os vértices deste grafo \cite{Pego:2014}.  		 
+	\item \textbf{Técnicas orientadas ao controle} - As falhas que podem modificar o fluxo correto de execução dos programas são detectadas e tratadas. Todas as técnicas no nível de instrução são baseadas na divisão do código do programa em blocos, construção de grafos e a checagem em tempo de execução sobre a correta transição entre os vértices deste grafo \cite{Pego:2014}.  		 
 	
 \end{itemize}
 
@@ -156,7 +156,7 @@ Weber \cite{Weber:2002} afirma que a simples replicação de componentes idênti
 
 \subsection{Diversidade ou Programação N-Versões}
 
-A partir de um problema, são implementadas diversas soluções alternativas, sendo a reposta do sistema determinada por votação, esta técnica é ilustrada na Figura \ref{Img:nVersion}. Segundo Avizienis \cite{Avizienis:1995} A. \textit{apud} Fischler et. al., os esforços de programação são realizados por \textit{n} indivíduos. Aonde for possível, diferentes algoritmos e linguagens de programação são usados em cada versão. Cada versão do programa é implementada de forma independente com base na especificação inicial do problema, embora sejam diferentes na sua implementação, as N versões são funcionalmente equivalentes e dificilmente apresentarão as mesmas falhas \cite{Avizienis:1995}. 
+A partir de um problema, são implementadas diversas soluções alternativas, sendo a reposta do sistema determinada por votação, esta técnica é ilustrada na Figura \ref{Img:nVersion}. Segundo Avizienis \cite{Avizienis:1995} A. \textit{apud} Fischler et. al., os esforços de programação são realizados por \textit{n} indivíduos. Sempre que for possível, diferentes algoritmos e linguagens de programação são usados em cada versão. Cada versão do programa é implementada de forma independente com base na especificação inicial do problema, embora sejam diferentes na sua implementação, as N-versões são funcionalmente equivalentes e dificilmente apresentarão as mesmas falhas \cite{Avizienis:1995}. 
 
 \begin{figure}[H]
 	\centering
@@ -166,7 +166,7 @@ A partir de um problema, são implementadas diversas soluções alternativas, se
 	%width=0.5\textwidth (Tamanho da Imagem)
 \end{figure}  
 
-Um exemplo de programação n-versões é o sistema de bordo do Space Shutle, no qual quatro computadores idênticos são utilizados em NMR (\textit{N-Modular Redundancy}). Esta técnica consiste em replicar o \textit{hardware} responsável pelo processamento da informação em \textit{n} módulos. Um quinto computador com \textit{hardware} diferente dos outros quatro, pode substituir os demais em caso de colapso no esquema NMR \cite{Pradhan:1996}.
+Um exemplo de programação n-versões é o sistema de bordo do \textit{Space Shutle}, no qual quatro computadores idênticos são utilizados em NMR (\textit{N-Modular Redundancy}). Esta técnica consiste em replicar o \textit{hardware} responsável pelo processamento da informação em \textit{n} módulos. Um quinto computador com \textit{hardware} diferente dos outros quatro, pode substituir os demais em caso de colapso no esquema NMR \cite{Pradhan:1996}.
 
 \subsection{Blocos de Recuperação}
 
@@ -193,7 +193,7 @@ Segundo Arlat \textit{et. al.} \cite{Arlat:1990} a validação e auxílio de pro
 
 O auxílio ao projeto ocorre durante a fase de desenvolvimento do projeto, buscando melhorar a eficiência dos mecanismos de testes e o protocolo de tolerância a falhas por meio da injeção de falhas \cite{Arlat:1990}.
 
-Uma das vantagens da utilização do método de injeção de falhas está no fato de ser uma técnica que permite a avaliação de um protótipo de sistema sob falhas, em particular ela mede a eficácia da detecção de erros do sistema e sua capacidade de correção. Outra vantagem são os efeitos das falhas no sistema que permitem revelar falhas críticas que por ventura viessem a ocorrer na execução do sistema em um ambiente real\cite{Arlat:2003}.     
+Uma das vantagens da utilização do método de injeção de falhas está no fato de ser uma técnica que permite a avaliação de um protótipo de sistema sob falhas, em particular ela mede a eficácia da detecção de erros do sistema e sua capacidade de correção. Outra vantagem são os efeitos das falhas no sistema que permitem revelar falhas críticas que por ventura viessem a ocorrer na execução do sistema em um ambiente real \cite{Arlat:2003}.     
 
 \subsection{Injeção de falhas por \textit{Hardware}}
 
@@ -202,11 +202,12 @@ Esta técnica necessita de um \textit{hardware} especial, no qual as falhas seri
 
 \subsection{Injeção de falhas por \textit{Software}}
 
-Esta técnica visa modificar o estado do \textit{hardware/software} do sistema por meio de um programa, fazendo com que o sistema se comporte como se uma falha de \textit{hardware} estivesse ocorrendo. Pode-se emular falhas em vários níveis do sistema desde que a funcionalidade do \textit{hardware} esteja visível através do \textit{software}. Por isso, injetar falhas por \textit{software} é menos dispendioso em termos de tempo e esforço do que as técnicas de \textit{hardware} implementadas, devido ao à capacidade de alterar o estado de registradores e memória \cite{Kanawati:1995}. Um exemplo de injeção de falhas por \textit{software} é a ferramenta \textit{Ferrari} apresentada por Kanawati \textit{et. al.} \cite{Kanawati:1995} que permite a injeção de falhas transitórias, bem como falhas permanentes, de modo que ele possa verificar a eficácia da detecção de erros e a correção simultânea dos mecanismos de verificação de falhas, e a capacidade para executar a injeção em código aberto. Alguns exemplos de injetores de falhas são FERRARI \cite{Kanawati:1995}, PFI \cite{Dawson:1995}, SFI \cite{Rosenberg:1993}, FIAT \cite{Segall:1988}. 
+Esta técnica visa modificar o estado do \textit{hardware/software} do sistema por meio de um programa, fazendo com que o sistema se comporte como se uma falha de \textit{hardware} estivesse ocorrendo. Pode-se emular falhas em vários níveis do sistema desde que a funcionalidade do \textit{hardware} esteja visível através do \textit{software}. Por isso, injetar falhas por \textit{software} é menos dispendioso em termos de tempo e esforço do que as técnicas de \textit{hardware} implementadas, devido a capacidade de alterar o estado de registradores e memória \cite{Kanawati:1995}. Um exemplo de injeção de falhas por \textit{software} é a ferramenta \textit{Ferrari} apresentada por Kanawati \textit{et. al.} \cite{Kanawati:1995} que possibilita a injeção de falhas transitórias, bem como falhas permanentes, de modo que ele possa verificar a eficácia da detecção de erros e a correção simultânea dos mecanismos de verificação de falhas, e a capacidade para executar a injeção em código aberto. Alguns exemplos de injetores de falhas são FERRARI \cite{Kanawati:1995}, PFI \cite{Dawson:1995}, SFI \cite{Rosenberg:1993} e FIAT \cite{Segall:1988}. 
 
 
-\section{\textit{Design Patterns}} \label{sec:designPattern}				
-Neste trabalho identificou-se a necessidade da utilização de um padrão de projeto ou em inglês design pattern. A ideia básica de padrões de projeto é a de utilizar soluções conhecidas para problemas conhecidos. No entanto cada padrão de projeto descreve um problema e sua solução, possibilitando que esta solução possa ser utilizada sem ter a necessidade de descobri-la novamente, economizando tempo e padronizando o desenvolvimento do projeto \cite{Vinicius:2009}. Existem inúmeros padrões de projetos para resolução de vários problemas, o conceito de máquina de estados foi utilizado neste trabalho \cite{Engholm:2010} para o desenvolvimento da biblioteca \textit{faultRecovery}. \textit{Design Patterns} possuem alguns elementos que facilitam no desenvolvimento da sua aplicação, são eles:
+\section{\textit{Design Patterns}} \label{sec:designPattern}
+				
+Neste trabalho foi necessário a utilização de \textit{design patterns} (padrões de projeto) para a elaboração de códigos eficientes. A ideia básica dos padrões de projeto é a de utilizar soluções conhecidas para problemas conhecidos. Cada padrão de projeto descreve um problema e sua solução, com isso, terceiros podem a utilizar sem ter a necessidade de descobri-la novamente, economizando tempo e padronizando o desenvolvimento do projeto \cite{Vinicius:2009}. Em geral, \textit{design patterns} possuem alguns elementos que facilitam no desenvolvimento da sua aplicação \cite{Engholm:2010}, são eles:
 
 \begin{itemize}
 	\item \textbf{Contexto} - Situação na qual o problema está sendo endereçado corretamente.
@@ -220,8 +221,10 @@ Neste trabalho identificou-se a necessidade da utilização de um padrão de pro
 	\item \textbf{Consequências} - Vantagens e desvantagens de se utilizar o padrão.
 	
 	\item \textbf{Padrões associados} - Padrões similares ou utilizados para construir o padrão.
-\end{itemize}			  
-
+\end{itemize}
 
 \subsection{Padrão GoF (Padrões Fundamentais Originais)} \label{subsec:gof}
-Os padrões GoF são divididos em três grupos: padrões de comportamento, de criação e estruturais. Estes descrevem como os objetos são colocados juntos, esses fornecem maneiras robustas de se criar objetos e aqueles descrevem como os objetos interagem, distribuindo responsabilidades \cite{Engholm:2010}. Neste trabalho utilizou-se o padrão \textit{State}, indicado para programas que podem ser representados por uma máquina de estados, que é o caso de dos \textit{firmwares} desenvolvidos para rodarem no microcontrolador \textit{mbed}. O padrão \textit{State} faz parte dos padrões de comportamento e permite que parte do comportamento de um objeto seja alterado conforme o estado do objeto. Cada objeto possui atributos, que representam seu estado, e também métodos, que representam seu comportamento \cite{Vinicius:2009}.
+
+O conceito de máquina de estados foi utilizado neste trabalho  para o desenvolvimento da biblioteca \textit{FaultRecovery}. O padrão \textit{State} vai ao encontro da resolução deste problema.
+
+Os padrões GoF são divididos em três grupos: padrões de comportamento, de criação e estruturais. Estes descrevem como os objetos devem ser gerenciados pelas estruturas de um programa, esses fornecem maneiras robustas de se criar objetos, e aqueles descrevem como os objetos interagem, distribuindo responsabilidades \cite{Engholm:2010}. Neste trabalho utilizou-se o padrão \textit{State}, indicado para programas que podem ser representados por uma máquina de estados, que é o caso dos \textit{firmwares} desenvolvidos para o microcontrolador \textit{mbed}. O padrão \textit{State} faz parte dos padrões de comportamento e permite que parte do comportamento de um objeto seja alterado conforme o estado do objeto. Cada objeto possui atributos, que representam seu estado, e também métodos, que representam seu comportamento \cite{Vinicius:2009}.
