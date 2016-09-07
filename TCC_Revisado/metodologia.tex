@@ -90,8 +90,7 @@ Para realizar a injeção de falhas na flash foi necessário seguir os seguintes
 	
 \end{itemize}
 
-Neste trabalho foi realizada a escrita de 256 bytes na memória flash, ou seja, foram injetadas 256 bytes de falhas em setores aleatórios que poderiam. 
-No momento da injeção, o setor afetado pela injeção de falhas poderia estar armazenando os dados coletados por um sistema embarcado ou as instruções do programa, ou seja, o valor das informações coletadas foi alterado podendo causar uma falha irreversível no sistema afetando o seu correto funcionamento. Porém a injeção de falhas não foi realizada durante a execução de algum programa, pois faltou tempo hábil e o interesse era explorar a memória \textit{flash} ou seja, descobrir se seria possível injetar falhas nessa região de memória. Uma vez que quando Kruger \cite{Kruger:2014} tentou injetar falhas na memória \textit{flash}, o microcontrolador travava durante a execução do injetor.
+Neste trabalho foi realizada a escrita de 256 bytes na memória \textit{flash}, ou seja, foram injetadas 256 bytes de falhas em setores aleatórios. As regiões da \textit{flash} armazenam dados estáticos e as instruções do programa, logo, falhas nesses setores podem causar uma falha irreversível no sistema afetando o seu correto funcionamento. Porém a injeção de falhas não foi realizada durante a execução de algum programa, pois faltou tempo hábil e o interesse era explorar a memória \textit{flash} ou seja, descobrir se seria possível injetar falhas nessa região de memória, uma vez que quando Kruger \cite{Kruger:2014} tentou injetar falhas na memória \textit{flash}, o microcontrolador travava durante a execução do injetor.
 
 \section{FaultRecovery: Extensão da biblioteca} \label{sec:extensaoBiblioteca}
 

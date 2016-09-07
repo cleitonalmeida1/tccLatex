@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.9)  6 SEP 2016 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.9)  7 SEP 2016 11:13
 entering extended mode
 **tcc.tex
 (tcc.tex
@@ -839,13 +839,10 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
- [4] (abstract.tex)
+] (abstract.tex)
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 47.
- [5
+ [4
 
 
 
@@ -862,7 +859,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 25.
- [6
+ [5
 
 
 
@@ -870,11 +867,11 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 53.
- [7])
+ [6])
 \tf@toc=\write4
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 58.
- [8]
+ [7]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
 
@@ -882,7 +879,7 @@ Package babel Info: Redefining portuges shorthand "|
 \tf@lof=\write5
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 63.
- [9
+ [8
 
 
 ]
@@ -892,7 +889,7 @@ Package babel Info: Redefining portuges shorthand "|
 \tf@lot=\write6
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
- [10
+ [9
 
 
 ]
@@ -902,7 +899,7 @@ Package babel Info: Redefining portuges shorthand "|
 \tf@lol=\write7
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 95.
- [11
+ [10
 
 
 ] (introducao.tex
@@ -913,7 +910,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 27.
-[12
+[11
 
 
 ]
@@ -923,24 +920,24 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 40.
- [13]
+ [12]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
- [14]
+ [13]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 72.
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 95.
- [15] (fundamentacao.tex
+ [14] (fundamentacao.tex
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 13.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 17.
-<figuras/modeloUniverso.jpg, id=456, 590.95781pt x 264.99pt>
+<figuras/modeloUniverso.jpg, id=451, 590.95781pt x 264.99pt>
 File: figuras/modeloUniverso.jpg Graphic file (type jpg)
 
 <use figuras/modeloUniverso.jpg>
@@ -948,7 +945,7 @@ Package pdftex.def Info: figuras/modeloUniverso.jpg used on input line 25.
 (pdftex.def)             Requested size: 328.6279pt x 147.3623pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [16
+ [15
 
 
 
@@ -966,8 +963,8 @@ Package Fancyhdr Warning: \headheight is too small (17.07164pt):
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
-[17 <./figuras/modeloUniverso.jpg>]
-<figuras/cinturao.jpg, id=482, 382.42876pt x 151.3153pt>
+[16 <./figuras/modeloUniverso.jpg>]
+<figuras/cinturao.jpg, id=477, 382.42876pt x 151.3153pt>
 File: figuras/cinturao.jpg Graphic file (type jpg)
 
 <use figuras/cinturao.jpg>
@@ -986,7 +983,7 @@ Package Fancyhdr Warning: \headheight is too small (17.07164pt):
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
-[18 <./figuras/cinturao.jpg>]
+[17 <./figuras/cinturao.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining portuges shorthand "|
@@ -1000,10 +997,10 @@ Package Fancyhdr Warning: \headheight is too small (17.07164pt):
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 85.
-[19]
+[18]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 87.
- <figuras/tabelaDenpendabilidade.jpg, id=518, 718.18312pt x 350.05782pt>
+ <figuras/tabelaDenpendabilidade.jpg, id=512, 718.18312pt x 350.05782pt>
 File: figuras/tabelaDenpendabilidade.jpg Graphic file (type jpg)
 
 <use figuras/tabelaDenpendabilidade.jpg>
@@ -1014,8 +1011,8 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 110.
- [20 <./figuras/tabelaDenpendabilidade.jpg>] <figuras/falhasCaracteristicas.jpg
-, id=533, 774.4935pt x 269.0853pt>
+ [19 <./figuras/tabelaDenpendabilidade.jpg>] <figuras/falhasCaracteristicas.jpg
+, id=528, 774.4935pt x 269.0853pt>
 File: figuras/falhasCaracteristicas.jpg Graphic file (type jpg)
 
 <use figuras/falhasCaracteristicas.jpg>
@@ -1026,12 +1023,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 137.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 141.
- [21 <./figuras/falhasCaracteristicas.jpg>]
+ [20 <./figuras/falhasCaracteristicas.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 142.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 157.
- <figuras/nVersions.jpg, id=553, 427.5975pt x 200.24812pt>
+ <figuras/nVersions.jpg, id=548, 427.5975pt x 200.24812pt>
 File: figuras/nVersions.jpg Graphic file (type jpg)
 
 <use figuras/nVersions.jpg>
@@ -1039,11 +1036,11 @@ Package pdftex.def Info: figuras/nVersions.jpg used on input line 163.
 (pdftex.def)             Requested size: 328.6279pt x 153.8982pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 168.
- [22]
+ [21]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 171.
 
-<figuras/blocoRecuperacao.jpg, id=566, 487.06969pt x 273.27094pt>
+<figuras/blocoRecuperacao.jpg, id=561, 487.06969pt x 273.27094pt>
 File: figuras/blocoRecuperacao.jpg Graphic file (type jpg)
 
 <use figuras/blocoRecuperacao.jpg>
@@ -1053,14 +1050,14 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 184.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 187.
- [23 <./figuras/nVersions.jpg> <./figuras/blocoRecuperacao.jpg>]
+ [22 <./figuras/nVersions.jpg> <./figuras/blocoRecuperacao.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 188.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 198.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 201.
- [24]
+ [23]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 203.
 Package babel Info: Redefining portuges shorthand "|
@@ -1069,16 +1066,16 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 226.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 230.
- [25])
+ [24])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 96.
- [26] (metodologia.tex
+ [25] (metodologia.tex
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 29.
-[27
+[26
 
 
 
@@ -1089,12 +1086,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 52.
- [28]
+ [27]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 61.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figuras/memoryMap.jpg, id=657, 490.08093pt x 408.77719pt>
+<figuras/memoryMap.jpg, id=652, 490.08093pt x 408.77719pt>
 File: figuras/memoryMap.jpg Graphic file (type jpg)
 
 <use figuras/memoryMap.jpg>
@@ -1102,122 +1099,123 @@ Package pdftex.def Info: figuras/memoryMap.jpg used on input line 65.
 (pdftex.def)             Requested size: 469.47049pt x 391.5983pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
- [29]
+ [28]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
- [30 <./figuras/memoryMap.jpg>]
+ [29 <./figuras/memoryMap.jpg>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 95.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 100.
+nput line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 101.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 102.
- [31]
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 100.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 104.
+ [30]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 113.
 
-<figuras/diagramaFaultRecovery.jpg, id=684, 731.73375pt x 341.02406pt>
+<figuras/diagramaFaultRecovery.jpg, id=680, 731.73375pt x 341.02406pt>
 File: figuras/diagramaFaultRecovery.jpg Graphic file (type jpg)
 
 <use figuras/diagramaFaultRecovery.jpg>
 Package pdftex.def Info: figuras/diagramaFaultRecovery.jpg used on input line 1
-20.
+19.
 (pdftex.def)             Requested size: 422.52057pt x 196.91467pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 127.
- [32 <./figuras/diagramaFaultRecovery.jpg>] <figuras/fluxoFaultRecovery.jpg, id
-=697, 1040.88875pt x 943.525pt>
+(babel)             in language  on input line 129.
+ [31 <./figuras/diagramaFaultRecovery.jpg>] <figuras/fluxoFaultRecovery.jpg, id
+=692, 1040.88875pt x 943.525pt>
 File: figuras/fluxoFaultRecovery.jpg Graphic file (type jpg)
 
 <use figuras/fluxoFaultRecovery.jpg>
-Package pdftex.def Info: figuras/fluxoFaultRecovery.jpg used on input line 143.
+Package pdftex.def Info: figuras/fluxoFaultRecovery.jpg used on input line 142.
 
 (pdftex.def)             Requested size: 422.52057pt x 382.98935pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 148.
- [33]
+(babel)             in language  on input line 147.
+ [32]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 148.
- [34 <./figuras/fluxoFaultRecovery.jpg>] ("C:\Program Files\MiKTeX 2.9\tex\late
+(babel)             in language  on input line 147.
+ [33 <./figuras/fluxoFaultRecovery.jpg>] ("C:\Program Files\MiKTeX 2.9\tex\late
 x\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 175.
+(babel)             in language  on input line 174.
+ [34]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 178.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 189.
  [35]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 179.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 190.
- [36]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 212.
- [37]
+(babel)             in language  on input line 211.
+ [36]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 214.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 219.
 
-<figuras/tdataPrimitivo.jpg, id=753, 691.08188pt x 175.40532pt>
+<figuras/tdataPrimitivo.jpg, id=747, 691.08188pt x 175.40532pt>
 File: figuras/tdataPrimitivo.jpg Graphic file (type jpg)
 
 <use figuras/tdataPrimitivo.jpg>
-Package pdftex.def Info: figuras/tdataPrimitivo.jpg used on input line 226.
+Package pdftex.def Info: figuras/tdataPrimitivo.jpg used on input line 225.
 (pdftex.def)             Requested size: 469.47049pt x 119.15894pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 236.
- [38 <./figuras/tdataPrimitivo.jpg>]
+(babel)             in language  on input line 235.
+ [37 <./figuras/tdataPrimitivo.jpg>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 242.
 
-<figuras/tdataObjetoPilha.jpg, id=760, 693.34032pt x 178.41656pt>
+<figuras/tdataObjetoPilha.jpg, id=755, 693.34032pt x 178.41656pt>
 File: figuras/tdataObjetoPilha.jpg Graphic file (type jpg)
 
 <use figuras/tdataObjetoPilha.jpg>
-Package pdftex.def Info: figuras/tdataObjetoPilha.jpg used on input line 253.
+Package pdftex.def Info: figuras/tdataObjetoPilha.jpg used on input line 252.
 (pdftex.def)             Requested size: 469.47049pt x 120.81255pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 258.
- [39]
+(babel)             in language  on input line 257.
+ [38]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 259.
+(babel)             in language  on input line 258.
 
-<figuras/tdataPonteiro.jpg, id=767, 685.05937pt x 182.18062pt>
+<figuras/tdataPonteiro.jpg, id=762, 685.05937pt x 182.18062pt>
 File: figuras/tdataPonteiro.jpg Graphic file (type jpg)
 
 <use figuras/tdataPonteiro.jpg>
-Package pdftex.def Info: figuras/tdataPonteiro.jpg used on input line 265.
+Package pdftex.def Info: figuras/tdataPonteiro.jpg used on input line 264.
 (pdftex.def)             Requested size: 469.47049pt x 124.85133pt.
 
-<figuras/tdataSetando.jpg, id=769, 692.5875pt x 190.46156pt>
+<figuras/tdataSetando.jpg, id=764, 692.5875pt x 190.46156pt>
 File: figuras/tdataSetando.jpg Graphic file (type jpg)
 
 <use figuras/tdataSetando.jpg>
-Package pdftex.def Info: figuras/tdataSetando.jpg used on input line 275.
+Package pdftex.def Info: figuras/tdataSetando.jpg used on input line 274.
 (pdftex.def)             Requested size: 469.47049pt x 129.10817pt.
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 97.
- [40 <./figuras/tdataObjetoPilha.jpg> <./figuras/tdataPonteiro.jpg>]
+ [39 <./figuras/tdataObjetoPilha.jpg> <./figuras/tdataPonteiro.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 97.
- [41 <./figuras/tdataSetando.jpg>] (resultados.tex
+ [40 <./figuras/tdataSetando.jpg>] (resultados.tex
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 14.
@@ -1225,11 +1223,11 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 18.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 25.
-[42
+[41
 
 
 
-] <figuras/tempoRecovery.jpg, id=788, 589.4522pt x 315.42844pt>
+] <figuras/tempoRecovery.jpg, id=783, 589.4522pt x 315.42844pt>
 File: figuras/tempoRecovery.jpg Graphic file (type jpg)
 
 <use figuras/tempoRecovery.jpg>
@@ -1237,8 +1235,8 @@ Package pdftex.def Info: figuras/tempoRecovery.jpg used on input line 28.
 (pdftex.def)             Requested size: 422.52057pt x 226.10237pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
- [43 <./figuras/tempoRecovery.jpg>]
-<figuras/tempoRecovery2.jpg, id=796, 517.18219pt x 63.98906pt>
+ [42 <./figuras/tempoRecovery.jpg>]
+<figuras/tempoRecovery2.jpg, id=790, 517.18219pt x 63.98906pt>
 File: figuras/tempoRecovery2.jpg Graphic file (type jpg)
 
 <use figuras/tempoRecovery2.jpg>
@@ -1246,11 +1244,11 @@ Package pdftex.def Info: figuras/tempoRecovery2.jpg used on input line 38.
 (pdftex.def)             Requested size: 422.52057pt x 52.279pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
- [44 <./figuras/tempoRecovery2.jpg>]
+ [43 <./figuras/tempoRecovery2.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 44.
 
-<figuras/tempoTData.jpg, id=805, 794.2172pt x 542.025pt>
+<figuras/tempoTData.jpg, id=800, 794.2172pt x 542.025pt>
 File: figuras/tempoTData.jpg Graphic file (type jpg)
 
 <use figuras/tempoTData.jpg>
@@ -1260,7 +1258,7 @@ Package pdftex.def Info: figuras/tempoTData.jpg used on input line 70.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/falhaTData.jpg, id=806, 632.3625pt x 347.79938pt>
+<figuras/falhaTData.jpg, id=801, 632.3625pt x 347.79938pt>
 File: figuras/falhaTData.jpg Graphic file (type jpg)
 
 <use figuras/falhaTData.jpg>
@@ -1272,13 +1270,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 85.
-[45]
+[44]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 91.
- [46 <./figuras/tempoTData.jpg>]
-<figuras/testeFaultRecovery.jpg, id=818, 498.36188pt x 353.06906pt>
+ [45 <./figuras/tempoTData.jpg>]
+<figuras/testeFaultRecovery.jpg, id=813, 498.36188pt x 353.06906pt>
 File: figuras/testeFaultRecovery.jpg Graphic file (type jpg)
 
 <use figuras/testeFaultRecovery.jpg>
@@ -1290,11 +1288,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 101.
-[47 <./figuras/falhaTData.jpg>]
+[46 <./figuras/falhaTData.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 102.
 
-<figuras/injecaoFlash.jpg, id=824, 380.17032pt x 398.99063pt>
+<figuras/injecaoFlash.jpg, id=819, 380.17032pt x 398.99063pt>
 File: figuras/injecaoFlash.jpg Graphic file (type jpg)
 
 <use figuras/injecaoFlash.jpg>
@@ -1303,17 +1301,17 @@ Package pdftex.def Info: figuras/injecaoFlash.jpg used on input line 108.
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
- [48 <./figuras/testeFaultRecovery.jpg>]
+ [47 <./figuras/testeFaultRecovery.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
 
-[49 <./figuras/injecaoFlash.jpg>] (conclusao.tex
+[48 <./figuras/injecaoFlash.jpg>] (conclusao.tex
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
-[50
+[49
 
 
 
@@ -1326,16 +1324,16 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 34.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 43.
- [51])
+ [50])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 99.
- [52]
+ [51]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 103.
  (tcc.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 90.
- [53
+ [52
 
 
 
@@ -1366,7 +1364,7 @@ mm/m/it/12 >$
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 194.
-[54]
+[53]
 Underfull \hbox (badness 10000) in paragraph at lines 291--296
 []\T1/cmr/m/n/12 MBED, A.  mbed lpc1768, 2016.  Dis-po-n�-vel em:
  []
@@ -1378,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--303
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 303.
-[55]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 316--320
 []\T1/cmr/m/n/12 MBED, A.  Iap in-ter-nal flash write, 2010.  Dis-po-n�-vel em:
 
@@ -1401,7 +1399,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 111.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 113.
- [56] (apendice.tex
+ [55] (apendice.tex
 Ap\^endice A.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 14.
@@ -1409,7 +1407,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=867, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=862, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
  <use anexos.pdf>
 Package pdftex.def Info: anexos.pdf used on input line 18.
@@ -1430,7 +1428,7 @@ ion <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=870, page=1, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=865, page=1, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 1>
@@ -1442,7 +1440,7 @@ Package pdftex.def Info: anexos.pdf, page1 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 18.
- [57
+ [56
 
 
 ]
@@ -1462,11 +1460,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page1 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[58 <./anexos.pdf>]
+[57 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=880, page=2, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=875, page=2, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 2>
@@ -1483,11 +1481,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page2 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[59 <./anexos.pdf>]
+[58 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=885, page=3, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=880, page=3, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 3>
@@ -1504,11 +1502,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page3 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[60 <./anexos.pdf>]
+[59 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=890, page=4, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=885, page=4, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 4>
@@ -1525,11 +1523,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page4 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[61 <./anexos.pdf>]
+[60 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=896, page=5, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=890, page=5, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 5>
@@ -1546,11 +1544,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page5 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[62 <./anexos.pdf>]
+[61 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=901, page=6, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=896, page=6, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 6>
@@ -1567,11 +1565,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page6 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[63 <./anexos.pdf>]
+[62 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=906, page=7, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=901, page=7, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 7>
@@ -1588,11 +1586,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page7 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[64 <./anexos.pdf>]
+[63 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=911, page=8, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=906, page=8, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 8>
@@ -1609,11 +1607,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page8 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[65 <./anexos.pdf>]
+[64 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=916, page=9, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=911, page=9, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 9>
@@ -1630,11 +1628,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page9 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[66 <./anexos.pdf>]
+[65 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=921, page=10, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=916, page=10, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 10>
@@ -1651,11 +1649,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page10 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[67 <./anexos.pdf>]
+[66 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=927, page=11, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=921, page=11, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 11>
@@ -1672,11 +1670,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page11 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[68 <./anexos.pdf>]
+[67 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=932, page=12, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=927, page=12, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 12>
@@ -1693,11 +1691,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page12 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[69 <./anexos.pdf>]
+[68 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=937, page=13, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=932, page=13, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 13>
@@ -1714,11 +1712,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page13 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[70 <./anexos.pdf>]
+[69 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=942, page=14, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=937, page=14, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 14>
@@ -1735,11 +1733,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page14 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[71 <./anexos.pdf>]
+[70 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=947, page=15, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=942, page=15, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 15>
@@ -1756,11 +1754,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page15 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[72 <./anexos.pdf>]
+[71 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=952, page=16, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=947, page=16, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 16>
@@ -1777,11 +1775,11 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page16 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[73 <./anexos.pdf>]
+[72 <./anexos.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./anexos.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
-<anexos.pdf, id=958, page=17, 597.55246pt x 845.07724pt>
+<anexos.pdf, id=952, page=17, 597.55246pt x 845.07724pt>
 File: anexos.pdf Graphic file (type pdf)
 
 <use anexos.pdf, page 17>
@@ -1798,7 +1796,7 @@ File: anexos.pdf Graphic file (type pdf)
 Package pdftex.def Info: anexos.pdf, page17 used on input line 18.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 
-[74 <./anexos.pdf>])
+[73 <./anexos.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
  (tcc.aux (cabecalho.aux) (resumo.aux) (abstract.aux)
@@ -1811,13 +1809,13 @@ Package rerunfilecheck Info: File `tcc.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 11933 strings out of 493673
- 171922 string characters out of 3143919
+ 11932 strings out of 493673
+ 171915 string characters out of 3143919
  307886 words of memory out of 3000000
  14735 multiletter control sequences out of 15000+200000
  25860 words of font info for 67 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,18n,60p,1518b,1585s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,18n,60p,1518b,2237s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1838,9 +1836,9 @@ ers\Cleiton Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
 600\ecrm1095.pk> <C:\Users\Cleiton Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk
 \ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Cleiton Gonçalves\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Cleito
-n Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx12
+n Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc12
 00.pk> <C:\Users\Cleiton Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\eccc1200.pk> <C:\Users\Cleiton Gonçalves\AppData\Local\MiKTeX
+nappen\ec\dpi600\ecbx1200.pk> <C:\Users\Cleiton Gonçalves\AppData\Local\MiKTeX
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Cleiton Gonçalv
 es\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:
 \Users\Cleiton Gonçalves\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
@@ -1851,9 +1849,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tcc.pdf (74 pages, 5280433 bytes).
+Output written on tcc.pdf (73 pages, 5279663 bytes).
 PDF statistics:
- 1811 PDF objects out of 2073 (max. 8388607)
- 240 named destinations out of 1000 (max. 500000)
+ 1806 PDF objects out of 2073 (max. 8388607)
+ 239 named destinations out of 1000 (max. 500000)
  625 words of extra memory for PDF output out of 10000 (max. 10000000)
 
